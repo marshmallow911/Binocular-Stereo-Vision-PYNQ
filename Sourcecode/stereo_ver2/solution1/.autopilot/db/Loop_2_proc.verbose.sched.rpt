@@ -1,0 +1,387 @@
+
+
+================================================================
+== Vivado HLS Report for 'Loop_2_proc'
+================================================================
+* Date:           Sat Aug  1 16:45:57 2020
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        stereo_2020
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     6.769|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    5|    5|    5|    5|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |          |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name| min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+        |- Loop 1  |    3|    3|         2|          1|          1|     3|    yes   |
+        +----------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 4
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 2, States = { 2 3 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	4  / (exitcond1_i)
+	3  / (!exitcond1_i)
+3 --> 
+	2  / true
+4 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.76>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%PAR_L_CAMM_val_1_2 = alloca float"   --->   Operation 5 'alloca' 'PAR_L_CAMM_val_1_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%PAR_L_CAMM_val_1_2_1 = alloca float"   --->   Operation 6 'alloca' 'PAR_L_CAMM_val_1_2_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%PAR_R_CAMM_val_1_2 = alloca float"   --->   Operation 7 'alloca' 'PAR_R_CAMM_val_1_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%PAR_R_CAMM_val_1_2_1 = alloca float"   --->   Operation 8 'alloca' 'PAR_R_CAMM_val_1_2_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%PAR_L_RINV_val_2_0 = alloca float"   --->   Operation 9 'alloca' 'PAR_L_RINV_val_2_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%PAR_L_RINV_val_2_1 = alloca float"   --->   Operation 10 'alloca' 'PAR_L_RINV_val_2_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "%PAR_L_RINV_val_2_2 = alloca float"   --->   Operation 11 'alloca' 'PAR_L_RINV_val_2_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%PAR_L_RINV_val_2_0_1 = alloca float"   --->   Operation 12 'alloca' 'PAR_L_RINV_val_2_0_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%PAR_L_RINV_val_2_1_1 = alloca float"   --->   Operation 13 'alloca' 'PAR_L_RINV_val_2_1_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%PAR_L_RINV_val_2_2_1 = alloca float"   --->   Operation 14 'alloca' 'PAR_L_RINV_val_2_2_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%PAR_L_RINV_val_2_0_2 = alloca float"   --->   Operation 15 'alloca' 'PAR_L_RINV_val_2_0_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "%PAR_L_RINV_val_2_1_2 = alloca float"   --->   Operation 16 'alloca' 'PAR_L_RINV_val_2_1_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%PAR_L_RINV_val_2_2_2 = alloca float"   --->   Operation 17 'alloca' 'PAR_L_RINV_val_2_2_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%PAR_R_RINV_val_2_0 = alloca float"   --->   Operation 18 'alloca' 'PAR_R_RINV_val_2_0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%PAR_R_RINV_val_2_1 = alloca float"   --->   Operation 19 'alloca' 'PAR_R_RINV_val_2_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%PAR_R_RINV_val_2_2 = alloca float"   --->   Operation 20 'alloca' 'PAR_R_RINV_val_2_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%PAR_R_RINV_val_2_0_1 = alloca float"   --->   Operation 21 'alloca' 'PAR_R_RINV_val_2_0_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "%PAR_R_RINV_val_2_1_1 = alloca float"   --->   Operation 22 'alloca' 'PAR_R_RINV_val_2_1_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "%PAR_R_RINV_val_2_2_1 = alloca float"   --->   Operation 23 'alloca' 'PAR_R_RINV_val_2_2_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "%PAR_R_RINV_val_2_0_2 = alloca float"   --->   Operation 24 'alloca' 'PAR_R_RINV_val_2_0_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "%PAR_R_RINV_val_2_1_2 = alloca float"   --->   Operation 25 'alloca' 'PAR_R_RINV_val_2_1_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%PAR_R_RINV_val_2_2_2 = alloca float"   --->   Operation 26 'alloca' 'PAR_R_RINV_val_2_2_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (1.76ns)   --->   "br label %.preheader693.i"   --->   Operation 27 'br' <Predicate = true> <Delay = 1.76>
+
+State 2 <SV = 1> <Delay = 6.76>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%fy2_out_dc = phi float [ %PAR_R_CAMM_val_1_1_163, %branch27.i ], [ undef, %entry ]" [stereo_2020/disparity_map.cpp:71]   --->   Operation 28 'phi' 'fy2_out_dc' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "%fx2_out_dc = phi float [ %PAR_R_CAMM_val_0_0_165, %branch27.i ], [ undef, %entry ]" [stereo_2020/disparity_map.cpp:71]   --->   Operation 29 'phi' 'fx2_out_dc' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%fy1_out_dc = phi float [ %PAR_L_CAMM_val_1_1_162, %branch27.i ], [ undef, %entry ]" [stereo_2020/disparity_map.cpp:70]   --->   Operation 30 'phi' 'fy1_out_dc' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 31 [1/1] (0.00ns)   --->   "%fx1_out_dc = phi float [ %PAR_L_CAMM_val_0_0_164, %branch27.i ], [ undef, %entry ]" [stereo_2020/disparity_map.cpp:70]   --->   Operation 31 'phi' 'fx1_out_dc' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 32 [1/1] (0.00ns)   --->   "%i_i = phi i2 [ %i, %branch27.i ], [ 0, %entry ]"   --->   Operation 32 'phi' 'i_i' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 33 [1/1] (0.95ns)   --->   "%exitcond1_i = icmp eq i2 %i_i, -1" [stereo_2020/disparity_map.cpp:66]   --->   Operation 33 'icmp' 'exitcond1_i' <Predicate = true> <Delay = 0.95> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 34 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecLoopTripCount(i64 3, i64 3, i64 3)"   --->   Operation 34 'speclooptripcount' 'empty' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 35 [1/1] (1.56ns)   --->   "%i = add i2 %i_i, 1" [stereo_2020/disparity_map.cpp:66]   --->   Operation 35 'add' 'i' <Predicate = true> <Delay = 1.56> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 36 [1/1] (0.00ns)   --->   "br i1 %exitcond1_i, label %.exit, label %branch7.i" [stereo_2020/disparity_map.cpp:66]   --->   Operation 36 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 37 [1/1] (0.00ns)   --->   "%i_cast548_i = zext i2 %i_i to i5" [stereo_2020/disparity_map.cpp:66]   --->   Operation 37 'zext' 'i_cast548_i' <Predicate = (!exitcond1_i)> <Delay = 0.00>
+ST_2 : Operation 38 [1/1] (0.00ns)   --->   "%p_shl_i = call i4 @_ssdm_op_BitConcatenate.i4.i2.i2(i2 %i_i, i2 0)" [stereo_2020/disparity_map.cpp:70]   --->   Operation 38 'bitconcatenate' 'p_shl_i' <Predicate = (!exitcond1_i)> <Delay = 0.00>
+ST_2 : Operation 39 [1/1] (0.00ns)   --->   "%p_shl_cast_i = zext i4 %p_shl_i to i5" [stereo_2020/disparity_map.cpp:70]   --->   Operation 39 'zext' 'p_shl_cast_i' <Predicate = (!exitcond1_i)> <Delay = 0.00>
+ST_2 : Operation 40 [1/1] (1.73ns)   --->   "%tmp_20_i = sub i5 %p_shl_cast_i, %i_cast548_i" [stereo_2020/disparity_map.cpp:70]   --->   Operation 40 'sub' 'tmp_20_i' <Predicate = (!exitcond1_i)> <Delay = 1.73> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 41 [1/1] (0.00ns)   --->   "%tmp_20_cast_i = sext i5 %tmp_20_i to i32" [stereo_2020/disparity_map.cpp:70]   --->   Operation 41 'sext' 'tmp_20_cast_i' <Predicate = (!exitcond1_i)> <Delay = 0.00>
+ST_2 : Operation 42 [1/1] (0.00ns)   --->   "%tmp_41_i = zext i32 %tmp_20_cast_i to i64" [stereo_2020/disparity_map.cpp:70]   --->   Operation 42 'zext' 'tmp_41_i' <Predicate = (!exitcond1_i)> <Delay = 0.00>
+ST_2 : Operation 43 [1/1] (0.00ns)   --->   "%PAR_L_CAMM_RAW_addr = getelementptr inbounds [9 x float]* @PAR_L_CAMM_RAW, i64 0, i64 %tmp_41_i" [stereo_2020/disparity_map.cpp:70]   --->   Operation 43 'getelementptr' 'PAR_L_CAMM_RAW_addr' <Predicate = (!exitcond1_i)> <Delay = 0.00>
+ST_2 : Operation 44 [2/2] (3.25ns)   --->   "%PAR_L_CAMM_val_0_0 = load float* %PAR_L_CAMM_RAW_addr, align 4" [stereo_2020/disparity_map.cpp:70]   --->   Operation 44 'load' 'PAR_L_CAMM_val_0_0' <Predicate = (!exitcond1_i)> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 9> <ROM>
+ST_2 : Operation 45 [1/1] (0.00ns)   --->   "%PAR_R_CAMM_RAW_addr = getelementptr inbounds [9 x float]* @PAR_R_CAMM_RAW, i64 0, i64 %tmp_41_i" [stereo_2020/disparity_map.cpp:71]   --->   Operation 45 'getelementptr' 'PAR_R_CAMM_RAW_addr' <Predicate = (!exitcond1_i)> <Delay = 0.00>
+ST_2 : Operation 46 [2/2] (3.25ns)   --->   "%PAR_R_CAMM_val_0_0 = load float* %PAR_R_CAMM_RAW_addr, align 4" [stereo_2020/disparity_map.cpp:71]   --->   Operation 46 'load' 'PAR_R_CAMM_val_0_0' <Predicate = (!exitcond1_i)> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 9> <ROM>
+ST_2 : Operation 47 [1/1] (0.00ns)   --->   "%PAR_L_RM_INV_addr = getelementptr inbounds [9 x float]* @PAR_L_RM_INV, i64 0, i64 %tmp_41_i" [stereo_2020/disparity_map.cpp:72]   --->   Operation 47 'getelementptr' 'PAR_L_RM_INV_addr' <Predicate = (!exitcond1_i)> <Delay = 0.00>
+ST_2 : Operation 48 [2/2] (3.25ns)   --->   "%PAR_L_RINV_val_1_0 = load float* %PAR_L_RM_INV_addr, align 4" [stereo_2020/disparity_map.cpp:72]   --->   Operation 48 'load' 'PAR_L_RINV_val_1_0' <Predicate = (!exitcond1_i)> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 9> <ROM>
+ST_2 : Operation 49 [1/1] (0.00ns)   --->   "%PAR_R_RM_INV_addr = getelementptr inbounds [9 x float]* @PAR_R_RM_INV, i64 0, i64 %tmp_41_i" [stereo_2020/disparity_map.cpp:73]   --->   Operation 49 'getelementptr' 'PAR_R_RM_INV_addr' <Predicate = (!exitcond1_i)> <Delay = 0.00>
+ST_2 : Operation 50 [2/2] (3.25ns)   --->   "%PAR_R_RINV_val_1_0 = load float* %PAR_R_RM_INV_addr, align 4" [stereo_2020/disparity_map.cpp:73]   --->   Operation 50 'load' 'PAR_R_RINV_val_1_0' <Predicate = (!exitcond1_i)> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 9> <ROM>
+ST_2 : Operation 51 [1/1] (1.78ns)   --->   "%tmp_40_1_i = add i5 %tmp_20_i, 1" [stereo_2020/disparity_map.cpp:70]   --->   Operation 51 'add' 'tmp_40_1_i' <Predicate = (!exitcond1_i)> <Delay = 1.78> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 52 [1/1] (0.00ns)   --->   "%tmp_40_1_cast_i = sext i5 %tmp_40_1_i to i32" [stereo_2020/disparity_map.cpp:70]   --->   Operation 52 'sext' 'tmp_40_1_cast_i' <Predicate = (!exitcond1_i)> <Delay = 0.00>
+ST_2 : Operation 53 [1/1] (0.00ns)   --->   "%tmp_41_1_i = zext i32 %tmp_40_1_cast_i to i64" [stereo_2020/disparity_map.cpp:70]   --->   Operation 53 'zext' 'tmp_41_1_i' <Predicate = (!exitcond1_i)> <Delay = 0.00>
+ST_2 : Operation 54 [1/1] (0.00ns)   --->   "%PAR_L_CAMM_RAW_addr_1 = getelementptr inbounds [9 x float]* @PAR_L_CAMM_RAW, i64 0, i64 %tmp_41_1_i" [stereo_2020/disparity_map.cpp:70]   --->   Operation 54 'getelementptr' 'PAR_L_CAMM_RAW_addr_1' <Predicate = (!exitcond1_i)> <Delay = 0.00>
+ST_2 : Operation 55 [2/2] (3.25ns)   --->   "%PAR_L_CAMM_val_1_1 = load float* %PAR_L_CAMM_RAW_addr_1, align 4" [stereo_2020/disparity_map.cpp:70]   --->   Operation 55 'load' 'PAR_L_CAMM_val_1_1' <Predicate = (!exitcond1_i)> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 9> <ROM>
+ST_2 : Operation 56 [1/1] (0.00ns)   --->   "%PAR_R_CAMM_RAW_addr_1 = getelementptr inbounds [9 x float]* @PAR_R_CAMM_RAW, i64 0, i64 %tmp_41_1_i" [stereo_2020/disparity_map.cpp:71]   --->   Operation 56 'getelementptr' 'PAR_R_CAMM_RAW_addr_1' <Predicate = (!exitcond1_i)> <Delay = 0.00>
+ST_2 : Operation 57 [2/2] (3.25ns)   --->   "%PAR_R_CAMM_val_1_1 = load float* %PAR_R_CAMM_RAW_addr_1, align 4" [stereo_2020/disparity_map.cpp:71]   --->   Operation 57 'load' 'PAR_R_CAMM_val_1_1' <Predicate = (!exitcond1_i)> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 9> <ROM>
+ST_2 : Operation 58 [1/1] (0.00ns)   --->   "%PAR_L_RM_INV_addr_1 = getelementptr inbounds [9 x float]* @PAR_L_RM_INV, i64 0, i64 %tmp_41_1_i" [stereo_2020/disparity_map.cpp:72]   --->   Operation 58 'getelementptr' 'PAR_L_RM_INV_addr_1' <Predicate = (!exitcond1_i)> <Delay = 0.00>
+ST_2 : Operation 59 [2/2] (3.25ns)   --->   "%PAR_L_RINV_val_1_1 = load float* %PAR_L_RM_INV_addr_1, align 4" [stereo_2020/disparity_map.cpp:72]   --->   Operation 59 'load' 'PAR_L_RINV_val_1_1' <Predicate = (!exitcond1_i)> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 9> <ROM>
+ST_2 : Operation 60 [1/1] (0.00ns)   --->   "%PAR_R_RM_INV_addr_1 = getelementptr inbounds [9 x float]* @PAR_R_RM_INV, i64 0, i64 %tmp_41_1_i" [stereo_2020/disparity_map.cpp:73]   --->   Operation 60 'getelementptr' 'PAR_R_RM_INV_addr_1' <Predicate = (!exitcond1_i)> <Delay = 0.00>
+ST_2 : Operation 61 [2/2] (3.25ns)   --->   "%PAR_R_RINV_val_1_1 = load float* %PAR_R_RM_INV_addr_1, align 4" [stereo_2020/disparity_map.cpp:73]   --->   Operation 61 'load' 'PAR_R_RINV_val_1_1' <Predicate = (!exitcond1_i)> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 9> <ROM>
+ST_2 : Operation 62 [1/1] (1.78ns)   --->   "%tmp_40_2_i = add i5 %tmp_20_i, 2" [stereo_2020/disparity_map.cpp:70]   --->   Operation 62 'add' 'tmp_40_2_i' <Predicate = (!exitcond1_i)> <Delay = 1.78> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.78> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 63 [1/1] (0.00ns)   --->   "%tmp_41_2_i = zext i5 %tmp_40_2_i to i64" [stereo_2020/disparity_map.cpp:70]   --->   Operation 63 'zext' 'tmp_41_2_i' <Predicate = (!exitcond1_i)> <Delay = 0.00>
+ST_2 : Operation 64 [1/1] (0.00ns)   --->   "%PAR_L_CAMM_RAW_addr_2 = getelementptr inbounds [9 x float]* @PAR_L_CAMM_RAW, i64 0, i64 %tmp_41_2_i" [stereo_2020/disparity_map.cpp:70]   --->   Operation 64 'getelementptr' 'PAR_L_CAMM_RAW_addr_2' <Predicate = (!exitcond1_i)> <Delay = 0.00>
+ST_2 : Operation 65 [2/2] (3.25ns)   --->   "%PAR_L_CAMM_val_0_2 = load float* %PAR_L_CAMM_RAW_addr_2, align 4" [stereo_2020/disparity_map.cpp:70]   --->   Operation 65 'load' 'PAR_L_CAMM_val_0_2' <Predicate = (!exitcond1_i)> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 9> <ROM>
+ST_2 : Operation 66 [1/1] (0.00ns)   --->   "%PAR_R_CAMM_RAW_addr_2 = getelementptr inbounds [9 x float]* @PAR_R_CAMM_RAW, i64 0, i64 %tmp_41_2_i" [stereo_2020/disparity_map.cpp:71]   --->   Operation 66 'getelementptr' 'PAR_R_CAMM_RAW_addr_2' <Predicate = (!exitcond1_i)> <Delay = 0.00>
+ST_2 : Operation 67 [2/2] (3.25ns)   --->   "%PAR_R_CAMM_val_0_2 = load float* %PAR_R_CAMM_RAW_addr_2, align 4" [stereo_2020/disparity_map.cpp:71]   --->   Operation 67 'load' 'PAR_R_CAMM_val_0_2' <Predicate = (!exitcond1_i)> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 9> <ROM>
+ST_2 : Operation 68 [1/1] (0.00ns)   --->   "%PAR_L_RM_INV_addr_2 = getelementptr inbounds [9 x float]* @PAR_L_RM_INV, i64 0, i64 %tmp_41_2_i" [stereo_2020/disparity_map.cpp:72]   --->   Operation 68 'getelementptr' 'PAR_L_RM_INV_addr_2' <Predicate = (!exitcond1_i)> <Delay = 0.00>
+ST_2 : Operation 69 [2/2] (3.25ns)   --->   "%PAR_L_RINV_val_1_2 = load float* %PAR_L_RM_INV_addr_2, align 4" [stereo_2020/disparity_map.cpp:72]   --->   Operation 69 'load' 'PAR_L_RINV_val_1_2' <Predicate = (!exitcond1_i)> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 9> <ROM>
+ST_2 : Operation 70 [1/1] (0.00ns)   --->   "%PAR_R_RM_INV_addr_2 = getelementptr inbounds [9 x float]* @PAR_R_RM_INV, i64 0, i64 %tmp_41_2_i" [stereo_2020/disparity_map.cpp:73]   --->   Operation 70 'getelementptr' 'PAR_R_RM_INV_addr_2' <Predicate = (!exitcond1_i)> <Delay = 0.00>
+ST_2 : Operation 71 [2/2] (3.25ns)   --->   "%PAR_R_RINV_val_1_2 = load float* %PAR_R_RM_INV_addr_2, align 4" [stereo_2020/disparity_map.cpp:73]   --->   Operation 71 'load' 'PAR_R_RINV_val_1_2' <Predicate = (!exitcond1_i)> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 9> <ROM>
+
+State 3 <SV = 2> <Delay = 3.95>
+ST_3 : Operation 72 [1/1] (0.00ns)   --->   "%tmp_10_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str13)" [stereo_2020/disparity_map.cpp:66]   --->   Operation 72 'specregionbegin' 'tmp_10_i' <Predicate = (!exitcond1_i)> <Delay = 0.00>
+ST_3 : Operation 73 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str3) nounwind" [stereo_2020/disparity_map.cpp:67]   --->   Operation 73 'specpipeline' <Predicate = (!exitcond1_i)> <Delay = 0.00>
+ST_3 : Operation 74 [1/2] (3.25ns)   --->   "%PAR_L_CAMM_val_0_0 = load float* %PAR_L_CAMM_RAW_addr, align 4" [stereo_2020/disparity_map.cpp:70]   --->   Operation 74 'load' 'PAR_L_CAMM_val_0_0' <Predicate = (!exitcond1_i)> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 9> <ROM>
+ST_3 : Operation 75 [1/1] (0.95ns)   --->   "%cond_i = icmp eq i2 %i_i, 0" [stereo_2020/disparity_map.cpp:70]   --->   Operation 75 'icmp' 'cond_i' <Predicate = (!exitcond1_i)> <Delay = 0.95> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 76 [1/1] (0.69ns)   --->   "%PAR_L_CAMM_val_0_0_164 = select i1 %cond_i, float %PAR_L_CAMM_val_0_0, float %fx1_out_dc" [stereo_2020/disparity_map.cpp:70]   --->   Operation 76 'select' 'PAR_L_CAMM_val_0_0_164' <Predicate = (!exitcond1_i)> <Delay = 0.69> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 77 [1/2] (3.25ns)   --->   "%PAR_R_CAMM_val_0_0 = load float* %PAR_R_CAMM_RAW_addr, align 4" [stereo_2020/disparity_map.cpp:71]   --->   Operation 77 'load' 'PAR_R_CAMM_val_0_0' <Predicate = (!exitcond1_i)> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 9> <ROM>
+ST_3 : Operation 78 [1/1] (0.69ns)   --->   "%PAR_R_CAMM_val_0_0_165 = select i1 %cond_i, float %PAR_R_CAMM_val_0_0, float %fx2_out_dc" [stereo_2020/disparity_map.cpp:71]   --->   Operation 78 'select' 'PAR_R_CAMM_val_0_0_165' <Predicate = (!exitcond1_i)> <Delay = 0.69> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 79 [1/2] (3.25ns)   --->   "%PAR_L_RINV_val_1_0 = load float* %PAR_L_RM_INV_addr, align 4" [stereo_2020/disparity_map.cpp:72]   --->   Operation 79 'load' 'PAR_L_RINV_val_1_0' <Predicate = (!exitcond1_i)> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 9> <ROM>
+ST_3 : Operation 80 [1/1] (1.13ns)   --->   "switch i2 %i_i, label %branch26.i [
+    i2 0, label %branch7.i.branch24.i_crit_edge
+    i2 1, label %branch25.i
+  ]" [stereo_2020/disparity_map.cpp:72]   --->   Operation 80 'switch' <Predicate = (!exitcond1_i)> <Delay = 1.13>
+ST_3 : Operation 81 [1/1] (0.00ns)   --->   "store float %PAR_L_RINV_val_1_0, float* %PAR_L_RINV_val_2_0_1" [stereo_2020/disparity_map.cpp:72]   --->   Operation 81 'store' <Predicate = (i_i == 1)> <Delay = 0.00>
+ST_3 : Operation 82 [1/1] (0.00ns)   --->   "br label %branch24.i" [stereo_2020/disparity_map.cpp:72]   --->   Operation 82 'br' <Predicate = (i_i == 1)> <Delay = 0.00>
+ST_3 : Operation 83 [1/1] (0.00ns)   --->   "store float %PAR_L_RINV_val_1_0, float* %PAR_L_RINV_val_2_0" [stereo_2020/disparity_map.cpp:72]   --->   Operation 83 'store' <Predicate = (i_i == 0)> <Delay = 0.00>
+ST_3 : Operation 84 [1/1] (0.00ns)   --->   "br label %branch24.i" [stereo_2020/disparity_map.cpp:72]   --->   Operation 84 'br' <Predicate = (i_i == 0)> <Delay = 0.00>
+ST_3 : Operation 85 [1/1] (0.00ns)   --->   "store float %PAR_L_RINV_val_1_0, float* %PAR_L_RINV_val_2_0_2" [stereo_2020/disparity_map.cpp:72]   --->   Operation 85 'store' <Predicate = (i_i != 0 & i_i != 1)> <Delay = 0.00>
+ST_3 : Operation 86 [1/1] (0.00ns)   --->   "br label %branch24.i" [stereo_2020/disparity_map.cpp:72]   --->   Operation 86 'br' <Predicate = (i_i != 0 & i_i != 1)> <Delay = 0.00>
+ST_3 : Operation 87 [1/2] (3.25ns)   --->   "%PAR_R_RINV_val_1_0 = load float* %PAR_R_RM_INV_addr, align 4" [stereo_2020/disparity_map.cpp:73]   --->   Operation 87 'load' 'PAR_R_RINV_val_1_0' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 9> <ROM>
+ST_3 : Operation 88 [1/1] (1.13ns)   --->   "switch i2 %i_i, label %branch35.i [
+    i2 0, label %branch24.i.branch33.i_crit_edge
+    i2 1, label %branch34.i
+  ]" [stereo_2020/disparity_map.cpp:73]   --->   Operation 88 'switch' <Predicate = true> <Delay = 1.13>
+ST_3 : Operation 89 [1/1] (0.00ns)   --->   "store float %PAR_R_RINV_val_1_0, float* %PAR_R_RINV_val_2_0_1" [stereo_2020/disparity_map.cpp:73]   --->   Operation 89 'store' <Predicate = (i_i == 1)> <Delay = 0.00>
+ST_3 : Operation 90 [1/1] (0.00ns)   --->   "br label %branch33.i" [stereo_2020/disparity_map.cpp:73]   --->   Operation 90 'br' <Predicate = (i_i == 1)> <Delay = 0.00>
+ST_3 : Operation 91 [1/1] (0.00ns)   --->   "store float %PAR_R_RINV_val_1_0, float* %PAR_R_RINV_val_2_0" [stereo_2020/disparity_map.cpp:73]   --->   Operation 91 'store' <Predicate = (i_i == 0)> <Delay = 0.00>
+ST_3 : Operation 92 [1/1] (0.00ns)   --->   "br label %branch33.i" [stereo_2020/disparity_map.cpp:73]   --->   Operation 92 'br' <Predicate = (i_i == 0)> <Delay = 0.00>
+ST_3 : Operation 93 [1/1] (0.00ns)   --->   "store float %PAR_R_RINV_val_1_0, float* %PAR_R_RINV_val_2_0_2" [stereo_2020/disparity_map.cpp:73]   --->   Operation 93 'store' <Predicate = (i_i != 0 & i_i != 1)> <Delay = 0.00>
+ST_3 : Operation 94 [1/1] (0.00ns)   --->   "br label %branch33.i" [stereo_2020/disparity_map.cpp:73]   --->   Operation 94 'br' <Predicate = (i_i != 0 & i_i != 1)> <Delay = 0.00>
+ST_3 : Operation 95 [1/2] (3.25ns)   --->   "%PAR_L_CAMM_val_1_1 = load float* %PAR_L_CAMM_RAW_addr_1, align 4" [stereo_2020/disparity_map.cpp:70]   --->   Operation 95 'load' 'PAR_L_CAMM_val_1_1' <Predicate = (!exitcond1_i)> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 9> <ROM>
+ST_3 : Operation 96 [1/1] (0.95ns)   --->   "%cond1_i = icmp eq i2 %i_i, 1" [stereo_2020/disparity_map.cpp:70]   --->   Operation 96 'icmp' 'cond1_i' <Predicate = (!exitcond1_i)> <Delay = 0.95> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 0.95> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 97 [1/1] (0.69ns)   --->   "%PAR_L_CAMM_val_1_1_162 = select i1 %cond1_i, float %PAR_L_CAMM_val_1_1, float %fy1_out_dc" [stereo_2020/disparity_map.cpp:70]   --->   Operation 97 'select' 'PAR_L_CAMM_val_1_1_162' <Predicate = (!exitcond1_i)> <Delay = 0.69> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 98 [1/2] (3.25ns)   --->   "%PAR_R_CAMM_val_1_1 = load float* %PAR_R_CAMM_RAW_addr_1, align 4" [stereo_2020/disparity_map.cpp:71]   --->   Operation 98 'load' 'PAR_R_CAMM_val_1_1' <Predicate = (!exitcond1_i)> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 9> <ROM>
+ST_3 : Operation 99 [1/1] (0.69ns)   --->   "%PAR_R_CAMM_val_1_1_163 = select i1 %cond1_i, float %PAR_R_CAMM_val_1_1, float %fy2_out_dc" [stereo_2020/disparity_map.cpp:71]   --->   Operation 99 'select' 'PAR_R_CAMM_val_1_1_163' <Predicate = (!exitcond1_i)> <Delay = 0.69> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.69> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_3 : Operation 100 [1/2] (3.25ns)   --->   "%PAR_L_RINV_val_1_1 = load float* %PAR_L_RM_INV_addr_1, align 4" [stereo_2020/disparity_map.cpp:72]   --->   Operation 100 'load' 'PAR_L_RINV_val_1_1' <Predicate = (!exitcond1_i)> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 9> <ROM>
+ST_3 : Operation 101 [1/1] (1.13ns)   --->   "switch i2 %i_i, label %branch23.i [
+    i2 0, label %branch33.i.branch21.i_crit_edge
+    i2 1, label %branch22.i
+  ]" [stereo_2020/disparity_map.cpp:72]   --->   Operation 101 'switch' <Predicate = (!exitcond1_i)> <Delay = 1.13>
+ST_3 : Operation 102 [1/1] (0.00ns)   --->   "store float %PAR_L_RINV_val_1_1, float* %PAR_L_RINV_val_2_1_1" [stereo_2020/disparity_map.cpp:72]   --->   Operation 102 'store' <Predicate = (i_i == 1)> <Delay = 0.00>
+ST_3 : Operation 103 [1/1] (0.00ns)   --->   "br label %branch21.i" [stereo_2020/disparity_map.cpp:72]   --->   Operation 103 'br' <Predicate = (i_i == 1)> <Delay = 0.00>
+ST_3 : Operation 104 [1/1] (0.00ns)   --->   "store float %PAR_L_RINV_val_1_1, float* %PAR_L_RINV_val_2_1" [stereo_2020/disparity_map.cpp:72]   --->   Operation 104 'store' <Predicate = (i_i == 0)> <Delay = 0.00>
+ST_3 : Operation 105 [1/1] (0.00ns)   --->   "br label %branch21.i" [stereo_2020/disparity_map.cpp:72]   --->   Operation 105 'br' <Predicate = (i_i == 0)> <Delay = 0.00>
+ST_3 : Operation 106 [1/1] (0.00ns)   --->   "store float %PAR_L_RINV_val_1_1, float* %PAR_L_RINV_val_2_1_2" [stereo_2020/disparity_map.cpp:72]   --->   Operation 106 'store' <Predicate = (i_i != 0 & i_i != 1)> <Delay = 0.00>
+ST_3 : Operation 107 [1/1] (0.00ns)   --->   "br label %branch21.i" [stereo_2020/disparity_map.cpp:72]   --->   Operation 107 'br' <Predicate = (i_i != 0 & i_i != 1)> <Delay = 0.00>
+ST_3 : Operation 108 [1/2] (3.25ns)   --->   "%PAR_R_RINV_val_1_1 = load float* %PAR_R_RM_INV_addr_1, align 4" [stereo_2020/disparity_map.cpp:73]   --->   Operation 108 'load' 'PAR_R_RINV_val_1_1' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 9> <ROM>
+ST_3 : Operation 109 [1/1] (1.13ns)   --->   "switch i2 %i_i, label %branch32.i [
+    i2 0, label %branch21.i.branch30.i_crit_edge
+    i2 1, label %branch31.i
+  ]" [stereo_2020/disparity_map.cpp:73]   --->   Operation 109 'switch' <Predicate = true> <Delay = 1.13>
+ST_3 : Operation 110 [1/1] (0.00ns)   --->   "store float %PAR_R_RINV_val_1_1, float* %PAR_R_RINV_val_2_1_1" [stereo_2020/disparity_map.cpp:73]   --->   Operation 110 'store' <Predicate = (i_i == 1)> <Delay = 0.00>
+ST_3 : Operation 111 [1/1] (0.00ns)   --->   "br label %branch30.i" [stereo_2020/disparity_map.cpp:73]   --->   Operation 111 'br' <Predicate = (i_i == 1)> <Delay = 0.00>
+ST_3 : Operation 112 [1/1] (0.00ns)   --->   "store float %PAR_R_RINV_val_1_1, float* %PAR_R_RINV_val_2_1" [stereo_2020/disparity_map.cpp:73]   --->   Operation 112 'store' <Predicate = (i_i == 0)> <Delay = 0.00>
+ST_3 : Operation 113 [1/1] (0.00ns)   --->   "br label %branch30.i" [stereo_2020/disparity_map.cpp:73]   --->   Operation 113 'br' <Predicate = (i_i == 0)> <Delay = 0.00>
+ST_3 : Operation 114 [1/1] (0.00ns)   --->   "store float %PAR_R_RINV_val_1_1, float* %PAR_R_RINV_val_2_1_2" [stereo_2020/disparity_map.cpp:73]   --->   Operation 114 'store' <Predicate = (i_i != 0 & i_i != 1)> <Delay = 0.00>
+ST_3 : Operation 115 [1/1] (0.00ns)   --->   "br label %branch30.i" [stereo_2020/disparity_map.cpp:73]   --->   Operation 115 'br' <Predicate = (i_i != 0 & i_i != 1)> <Delay = 0.00>
+ST_3 : Operation 116 [1/2] (3.25ns)   --->   "%PAR_L_CAMM_val_0_2 = load float* %PAR_L_CAMM_RAW_addr_2, align 4" [stereo_2020/disparity_map.cpp:70]   --->   Operation 116 'load' 'PAR_L_CAMM_val_0_2' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 9> <ROM>
+ST_3 : Operation 117 [1/1] (1.13ns)   --->   "switch i2 %i_i, label %branch2.i [
+    i2 0, label %branch0.i
+    i2 1, label %branch1.i
+  ]" [stereo_2020/disparity_map.cpp:70]   --->   Operation 117 'switch' <Predicate = true> <Delay = 1.13>
+ST_3 : Operation 118 [1/1] (0.00ns)   --->   "store float %PAR_L_CAMM_val_0_2, float* %PAR_L_CAMM_val_1_2_1" [stereo_2020/disparity_map.cpp:70]   --->   Operation 118 'store' <Predicate = (i_i == 1)> <Delay = 0.00>
+ST_3 : Operation 119 [1/1] (0.00ns)   --->   "br label %branch2.i" [stereo_2020/disparity_map.cpp:70]   --->   Operation 119 'br' <Predicate = (i_i == 1)> <Delay = 0.00>
+ST_3 : Operation 120 [1/1] (0.00ns)   --->   "store float %PAR_L_CAMM_val_0_2, float* %PAR_L_CAMM_val_1_2" [stereo_2020/disparity_map.cpp:70]   --->   Operation 120 'store' <Predicate = (i_i == 0)> <Delay = 0.00>
+ST_3 : Operation 121 [1/1] (0.00ns)   --->   "br label %branch2.i" [stereo_2020/disparity_map.cpp:70]   --->   Operation 121 'br' <Predicate = (i_i == 0)> <Delay = 0.00>
+ST_3 : Operation 122 [1/2] (3.25ns)   --->   "%PAR_R_CAMM_val_0_2 = load float* %PAR_R_CAMM_RAW_addr_2, align 4" [stereo_2020/disparity_map.cpp:71]   --->   Operation 122 'load' 'PAR_R_CAMM_val_0_2' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 9> <ROM>
+ST_3 : Operation 123 [1/1] (1.13ns)   --->   "switch i2 %i_i, label %branch11.i [
+    i2 0, label %branch9.i
+    i2 1, label %branch10.i
+  ]" [stereo_2020/disparity_map.cpp:71]   --->   Operation 123 'switch' <Predicate = true> <Delay = 1.13>
+ST_3 : Operation 124 [1/1] (0.00ns)   --->   "store float %PAR_R_CAMM_val_0_2, float* %PAR_R_CAMM_val_1_2_1" [stereo_2020/disparity_map.cpp:71]   --->   Operation 124 'store' <Predicate = (i_i == 1)> <Delay = 0.00>
+ST_3 : Operation 125 [1/1] (0.00ns)   --->   "br label %branch11.i" [stereo_2020/disparity_map.cpp:71]   --->   Operation 125 'br' <Predicate = (i_i == 1)> <Delay = 0.00>
+ST_3 : Operation 126 [1/1] (0.00ns)   --->   "store float %PAR_R_CAMM_val_0_2, float* %PAR_R_CAMM_val_1_2" [stereo_2020/disparity_map.cpp:71]   --->   Operation 126 'store' <Predicate = (i_i == 0)> <Delay = 0.00>
+ST_3 : Operation 127 [1/1] (0.00ns)   --->   "br label %branch11.i" [stereo_2020/disparity_map.cpp:71]   --->   Operation 127 'br' <Predicate = (i_i == 0)> <Delay = 0.00>
+ST_3 : Operation 128 [1/2] (3.25ns)   --->   "%PAR_L_RINV_val_1_2 = load float* %PAR_L_RM_INV_addr_2, align 4" [stereo_2020/disparity_map.cpp:72]   --->   Operation 128 'load' 'PAR_L_RINV_val_1_2' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 9> <ROM>
+ST_3 : Operation 129 [1/1] (1.13ns)   --->   "switch i2 %i_i, label %branch20.i [
+    i2 0, label %branch11.i.branch18.i_crit_edge
+    i2 1, label %branch19.i
+  ]" [stereo_2020/disparity_map.cpp:72]   --->   Operation 129 'switch' <Predicate = true> <Delay = 1.13>
+ST_3 : Operation 130 [1/1] (0.00ns)   --->   "store float %PAR_L_RINV_val_1_2, float* %PAR_L_RINV_val_2_2_1" [stereo_2020/disparity_map.cpp:72]   --->   Operation 130 'store' <Predicate = (i_i == 1)> <Delay = 0.00>
+ST_3 : Operation 131 [1/1] (0.00ns)   --->   "br label %branch18.i" [stereo_2020/disparity_map.cpp:72]   --->   Operation 131 'br' <Predicate = (i_i == 1)> <Delay = 0.00>
+ST_3 : Operation 132 [1/1] (0.00ns)   --->   "store float %PAR_L_RINV_val_1_2, float* %PAR_L_RINV_val_2_2" [stereo_2020/disparity_map.cpp:72]   --->   Operation 132 'store' <Predicate = (i_i == 0)> <Delay = 0.00>
+ST_3 : Operation 133 [1/1] (0.00ns)   --->   "br label %branch18.i" [stereo_2020/disparity_map.cpp:72]   --->   Operation 133 'br' <Predicate = (i_i == 0)> <Delay = 0.00>
+ST_3 : Operation 134 [1/1] (0.00ns)   --->   "store float %PAR_L_RINV_val_1_2, float* %PAR_L_RINV_val_2_2_2" [stereo_2020/disparity_map.cpp:72]   --->   Operation 134 'store' <Predicate = (i_i != 0 & i_i != 1)> <Delay = 0.00>
+ST_3 : Operation 135 [1/1] (0.00ns)   --->   "br label %branch18.i" [stereo_2020/disparity_map.cpp:72]   --->   Operation 135 'br' <Predicate = (i_i != 0 & i_i != 1)> <Delay = 0.00>
+ST_3 : Operation 136 [1/2] (3.25ns)   --->   "%PAR_R_RINV_val_1_2 = load float* %PAR_R_RM_INV_addr_2, align 4" [stereo_2020/disparity_map.cpp:73]   --->   Operation 136 'load' 'PAR_R_RINV_val_1_2' <Predicate = true> <Delay = 3.25> <Core = "ROM_nP">   --->   Core 52 'ROM_nP' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load'> <Ports = 0> <Width = 32> <Depth = 9> <ROM>
+ST_3 : Operation 137 [1/1] (1.13ns)   --->   "switch i2 %i_i, label %branch29.i [
+    i2 0, label %branch18.i.branch27.i_crit_edge
+    i2 1, label %branch28.i
+  ]" [stereo_2020/disparity_map.cpp:73]   --->   Operation 137 'switch' <Predicate = true> <Delay = 1.13>
+ST_3 : Operation 138 [1/1] (0.00ns)   --->   "store float %PAR_R_RINV_val_1_2, float* %PAR_R_RINV_val_2_2_1" [stereo_2020/disparity_map.cpp:73]   --->   Operation 138 'store' <Predicate = (i_i == 1)> <Delay = 0.00>
+ST_3 : Operation 139 [1/1] (0.00ns)   --->   "br label %branch27.i" [stereo_2020/disparity_map.cpp:73]   --->   Operation 139 'br' <Predicate = (i_i == 1)> <Delay = 0.00>
+ST_3 : Operation 140 [1/1] (0.00ns)   --->   "store float %PAR_R_RINV_val_1_2, float* %PAR_R_RINV_val_2_2" [stereo_2020/disparity_map.cpp:73]   --->   Operation 140 'store' <Predicate = (i_i == 0)> <Delay = 0.00>
+ST_3 : Operation 141 [1/1] (0.00ns)   --->   "br label %branch27.i" [stereo_2020/disparity_map.cpp:73]   --->   Operation 141 'br' <Predicate = (i_i == 0)> <Delay = 0.00>
+ST_3 : Operation 142 [1/1] (0.00ns)   --->   "store float %PAR_R_RINV_val_1_2, float* %PAR_R_RINV_val_2_2_2" [stereo_2020/disparity_map.cpp:73]   --->   Operation 142 'store' <Predicate = (i_i != 0 & i_i != 1)> <Delay = 0.00>
+ST_3 : Operation 143 [1/1] (0.00ns)   --->   "br label %branch27.i" [stereo_2020/disparity_map.cpp:73]   --->   Operation 143 'br' <Predicate = (i_i != 0 & i_i != 1)> <Delay = 0.00>
+ST_3 : Operation 144 [1/1] (0.00ns)   --->   "%empty_161 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str13, i32 %tmp_10_i)" [stereo_2020/disparity_map.cpp:75]   --->   Operation 144 'specregionend' 'empty_161' <Predicate = (!exitcond1_i)> <Delay = 0.00>
+ST_3 : Operation 145 [1/1] (0.00ns)   --->   "br label %.preheader693.i" [stereo_2020/disparity_map.cpp:66]   --->   Operation 145 'br' <Predicate = (!exitcond1_i)> <Delay = 0.00>
+
+State 4 <SV = 2> <Delay = 3.63>
+ST_4 : Operation 146 [1/1] (0.00ns)   --->   "%PAR_L_CAMM_val_1_2_3 = load float* %PAR_L_CAMM_val_1_2"   --->   Operation 146 'load' 'PAR_L_CAMM_val_1_2_3' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 147 [1/1] (0.00ns)   --->   "%PAR_L_CAMM_val_1_2_4 = load float* %PAR_L_CAMM_val_1_2_1"   --->   Operation 147 'load' 'PAR_L_CAMM_val_1_2_4' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 148 [1/1] (0.00ns)   --->   "%PAR_R_CAMM_val_1_2_3 = load float* %PAR_R_CAMM_val_1_2"   --->   Operation 148 'load' 'PAR_R_CAMM_val_1_2_3' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 149 [1/1] (0.00ns)   --->   "%PAR_R_CAMM_val_1_2_4 = load float* %PAR_R_CAMM_val_1_2_1"   --->   Operation 149 'load' 'PAR_R_CAMM_val_1_2_4' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 150 [1/1] (0.00ns)   --->   "%PAR_L_RINV_val_2_0_4 = load float* %PAR_L_RINV_val_2_0"   --->   Operation 150 'load' 'PAR_L_RINV_val_2_0_4' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 151 [1/1] (0.00ns)   --->   "%PAR_L_RINV_val_2_1_4 = load float* %PAR_L_RINV_val_2_1"   --->   Operation 151 'load' 'PAR_L_RINV_val_2_1_4' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 152 [1/1] (0.00ns)   --->   "%PAR_L_RINV_val_2_2_4 = load float* %PAR_L_RINV_val_2_2"   --->   Operation 152 'load' 'PAR_L_RINV_val_2_2_4' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 153 [1/1] (0.00ns)   --->   "%PAR_L_RINV_val_2_0_5 = load float* %PAR_L_RINV_val_2_0_1"   --->   Operation 153 'load' 'PAR_L_RINV_val_2_0_5' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 154 [1/1] (0.00ns)   --->   "%PAR_L_RINV_val_2_1_5 = load float* %PAR_L_RINV_val_2_1_1"   --->   Operation 154 'load' 'PAR_L_RINV_val_2_1_5' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 155 [1/1] (0.00ns)   --->   "%PAR_L_RINV_val_2_2_5 = load float* %PAR_L_RINV_val_2_2_1"   --->   Operation 155 'load' 'PAR_L_RINV_val_2_2_5' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 156 [1/1] (0.00ns)   --->   "%PAR_L_RINV_val_2_0_6 = load float* %PAR_L_RINV_val_2_0_2"   --->   Operation 156 'load' 'PAR_L_RINV_val_2_0_6' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 157 [1/1] (0.00ns)   --->   "%PAR_L_RINV_val_2_1_6 = load float* %PAR_L_RINV_val_2_1_2"   --->   Operation 157 'load' 'PAR_L_RINV_val_2_1_6' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 158 [1/1] (0.00ns)   --->   "%PAR_L_RINV_val_2_2_6 = load float* %PAR_L_RINV_val_2_2_2"   --->   Operation 158 'load' 'PAR_L_RINV_val_2_2_6' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 159 [1/1] (0.00ns)   --->   "%PAR_R_RINV_val_2_0_4 = load float* %PAR_R_RINV_val_2_0"   --->   Operation 159 'load' 'PAR_R_RINV_val_2_0_4' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 160 [1/1] (0.00ns)   --->   "%PAR_R_RINV_val_2_1_4 = load float* %PAR_R_RINV_val_2_1"   --->   Operation 160 'load' 'PAR_R_RINV_val_2_1_4' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 161 [1/1] (0.00ns)   --->   "%PAR_R_RINV_val_2_2_4 = load float* %PAR_R_RINV_val_2_2"   --->   Operation 161 'load' 'PAR_R_RINV_val_2_2_4' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 162 [1/1] (0.00ns)   --->   "%PAR_R_RINV_val_2_0_5 = load float* %PAR_R_RINV_val_2_0_1"   --->   Operation 162 'load' 'PAR_R_RINV_val_2_0_5' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 163 [1/1] (0.00ns)   --->   "%PAR_R_RINV_val_2_1_5 = load float* %PAR_R_RINV_val_2_1_1"   --->   Operation 163 'load' 'PAR_R_RINV_val_2_1_5' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 164 [1/1] (0.00ns)   --->   "%PAR_R_RINV_val_2_2_5 = load float* %PAR_R_RINV_val_2_2_1"   --->   Operation 164 'load' 'PAR_R_RINV_val_2_2_5' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 165 [1/1] (0.00ns)   --->   "%PAR_R_RINV_val_2_0_6 = load float* %PAR_R_RINV_val_2_0_2"   --->   Operation 165 'load' 'PAR_R_RINV_val_2_0_6' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 166 [1/1] (0.00ns)   --->   "%PAR_R_RINV_val_2_1_6 = load float* %PAR_R_RINV_val_2_1_2"   --->   Operation 166 'load' 'PAR_R_RINV_val_2_1_6' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 167 [1/1] (0.00ns)   --->   "%PAR_R_RINV_val_2_2_6 = load float* %PAR_R_RINV_val_2_2_2"   --->   Operation 167 'load' 'PAR_R_RINV_val_2_2_6' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 168 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(float* %PAR_R_RINV_val_2_2_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str140, i32 0, i32 0, [1 x i8]* @p_str141, [1 x i8]* @p_str142, [1 x i8]* @p_str143, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str144, [11 x i8]* @ScalarProp_str)"   --->   Operation 168 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 169 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.floatP(float* %PAR_R_RINV_val_2_2_out_out, float %PAR_R_RINV_val_2_2_6)"   --->   Operation 169 'write' <Predicate = true> <Delay = 3.63> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 3> <FIFO>
+ST_4 : Operation 170 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(float* %PAR_R_RINV_val_2_1_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str145, i32 0, i32 0, [1 x i8]* @p_str146, [1 x i8]* @p_str147, [1 x i8]* @p_str148, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str149, [11 x i8]* @ScalarProp_str)"   --->   Operation 170 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 171 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.floatP(float* %PAR_R_RINV_val_2_1_out_out, float %PAR_R_RINV_val_2_1_6)"   --->   Operation 171 'write' <Predicate = true> <Delay = 3.63> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 3> <FIFO>
+ST_4 : Operation 172 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(float* %PAR_R_RINV_val_2_0_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str150, i32 0, i32 0, [1 x i8]* @p_str151, [1 x i8]* @p_str152, [1 x i8]* @p_str153, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str154, [11 x i8]* @ScalarProp_str)"   --->   Operation 172 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 173 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.floatP(float* %PAR_R_RINV_val_2_0_out_out, float %PAR_R_RINV_val_2_0_6)"   --->   Operation 173 'write' <Predicate = true> <Delay = 3.63> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 3> <FIFO>
+ST_4 : Operation 174 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(float* %PAR_R_RINV_val_1_2_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str155, i32 0, i32 0, [1 x i8]* @p_str156, [1 x i8]* @p_str157, [1 x i8]* @p_str158, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str159, [11 x i8]* @ScalarProp_str)"   --->   Operation 174 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 175 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.floatP(float* %PAR_R_RINV_val_1_2_out_out, float %PAR_R_RINV_val_2_2_5)"   --->   Operation 175 'write' <Predicate = true> <Delay = 3.63> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 3> <FIFO>
+ST_4 : Operation 176 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(float* %PAR_R_RINV_val_1_1_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str160, i32 0, i32 0, [1 x i8]* @p_str161, [1 x i8]* @p_str162, [1 x i8]* @p_str163, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str164, [11 x i8]* @ScalarProp_str)"   --->   Operation 176 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 177 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.floatP(float* %PAR_R_RINV_val_1_1_out_out, float %PAR_R_RINV_val_2_1_5)"   --->   Operation 177 'write' <Predicate = true> <Delay = 3.63> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 3> <FIFO>
+ST_4 : Operation 178 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(float* %PAR_R_RINV_val_1_0_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str165, i32 0, i32 0, [1 x i8]* @p_str166, [1 x i8]* @p_str167, [1 x i8]* @p_str168, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str169, [11 x i8]* @ScalarProp_str)"   --->   Operation 178 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 179 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.floatP(float* %PAR_R_RINV_val_1_0_out_out, float %PAR_R_RINV_val_2_0_5)"   --->   Operation 179 'write' <Predicate = true> <Delay = 3.63> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 3> <FIFO>
+ST_4 : Operation 180 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(float* %PAR_R_RINV_val_0_2_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str170, i32 0, i32 0, [1 x i8]* @p_str171, [1 x i8]* @p_str172, [1 x i8]* @p_str173, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str174, [11 x i8]* @ScalarProp_str)"   --->   Operation 180 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 181 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.floatP(float* %PAR_R_RINV_val_0_2_out_out, float %PAR_R_RINV_val_2_2_4)"   --->   Operation 181 'write' <Predicate = true> <Delay = 3.63> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 3> <FIFO>
+ST_4 : Operation 182 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(float* %PAR_R_RINV_val_0_1_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str175, i32 0, i32 0, [1 x i8]* @p_str176, [1 x i8]* @p_str177, [1 x i8]* @p_str178, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str179, [11 x i8]* @ScalarProp_str)"   --->   Operation 182 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 183 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.floatP(float* %PAR_R_RINV_val_0_1_out_out, float %PAR_R_RINV_val_2_1_4)"   --->   Operation 183 'write' <Predicate = true> <Delay = 3.63> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 3> <FIFO>
+ST_4 : Operation 184 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(float* %PAR_R_RINV_val_0_0_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str180, i32 0, i32 0, [1 x i8]* @p_str181, [1 x i8]* @p_str182, [1 x i8]* @p_str183, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str184, [11 x i8]* @ScalarProp_str)"   --->   Operation 184 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 185 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.floatP(float* %PAR_R_RINV_val_0_0_out_out, float %PAR_R_RINV_val_2_0_4)"   --->   Operation 185 'write' <Predicate = true> <Delay = 3.63> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 3> <FIFO>
+ST_4 : Operation 186 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(float* %PAR_L_RINV_val_2_2_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str185, i32 0, i32 0, [1 x i8]* @p_str186, [1 x i8]* @p_str187, [1 x i8]* @p_str188, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str189, [11 x i8]* @ScalarProp_str)"   --->   Operation 186 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 187 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.floatP(float* %PAR_L_RINV_val_2_2_out_out, float %PAR_L_RINV_val_2_2_6)"   --->   Operation 187 'write' <Predicate = true> <Delay = 3.63> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 3> <FIFO>
+ST_4 : Operation 188 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(float* %PAR_L_RINV_val_2_1_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str190, i32 0, i32 0, [1 x i8]* @p_str191, [1 x i8]* @p_str192, [1 x i8]* @p_str193, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str194, [11 x i8]* @ScalarProp_str)"   --->   Operation 188 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 189 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.floatP(float* %PAR_L_RINV_val_2_1_out_out, float %PAR_L_RINV_val_2_1_6)"   --->   Operation 189 'write' <Predicate = true> <Delay = 3.63> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 3> <FIFO>
+ST_4 : Operation 190 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(float* %PAR_L_RINV_val_2_0_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str195, i32 0, i32 0, [1 x i8]* @p_str196, [1 x i8]* @p_str197, [1 x i8]* @p_str198, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str199, [11 x i8]* @ScalarProp_str)"   --->   Operation 190 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 191 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.floatP(float* %PAR_L_RINV_val_2_0_out_out, float %PAR_L_RINV_val_2_0_6)"   --->   Operation 191 'write' <Predicate = true> <Delay = 3.63> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 3> <FIFO>
+ST_4 : Operation 192 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(float* %PAR_L_RINV_val_1_2_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str200, i32 0, i32 0, [1 x i8]* @p_str201, [1 x i8]* @p_str202, [1 x i8]* @p_str203, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str204, [11 x i8]* @ScalarProp_str)"   --->   Operation 192 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 193 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.floatP(float* %PAR_L_RINV_val_1_2_out_out, float %PAR_L_RINV_val_2_2_5)"   --->   Operation 193 'write' <Predicate = true> <Delay = 3.63> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 3> <FIFO>
+ST_4 : Operation 194 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(float* %PAR_L_RINV_val_1_1_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str205, i32 0, i32 0, [1 x i8]* @p_str206, [1 x i8]* @p_str207, [1 x i8]* @p_str208, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str209, [11 x i8]* @ScalarProp_str)"   --->   Operation 194 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 195 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.floatP(float* %PAR_L_RINV_val_1_1_out_out, float %PAR_L_RINV_val_2_1_5)"   --->   Operation 195 'write' <Predicate = true> <Delay = 3.63> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 3> <FIFO>
+ST_4 : Operation 196 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(float* %PAR_L_RINV_val_1_0_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str210, i32 0, i32 0, [1 x i8]* @p_str211, [1 x i8]* @p_str212, [1 x i8]* @p_str213, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str214, [11 x i8]* @ScalarProp_str)"   --->   Operation 196 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 197 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.floatP(float* %PAR_L_RINV_val_1_0_out_out, float %PAR_L_RINV_val_2_0_5)"   --->   Operation 197 'write' <Predicate = true> <Delay = 3.63> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 3> <FIFO>
+ST_4 : Operation 198 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(float* %PAR_L_RINV_val_0_2_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str215, i32 0, i32 0, [1 x i8]* @p_str216, [1 x i8]* @p_str217, [1 x i8]* @p_str218, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str219, [11 x i8]* @ScalarProp_str)"   --->   Operation 198 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 199 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.floatP(float* %PAR_L_RINV_val_0_2_out_out, float %PAR_L_RINV_val_2_2_4)"   --->   Operation 199 'write' <Predicate = true> <Delay = 3.63> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 3> <FIFO>
+ST_4 : Operation 200 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(float* %PAR_L_RINV_val_0_1_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str220, i32 0, i32 0, [1 x i8]* @p_str221, [1 x i8]* @p_str222, [1 x i8]* @p_str223, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str224, [11 x i8]* @ScalarProp_str)"   --->   Operation 200 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 201 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.floatP(float* %PAR_L_RINV_val_0_1_out_out, float %PAR_L_RINV_val_2_1_4)"   --->   Operation 201 'write' <Predicate = true> <Delay = 3.63> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 3> <FIFO>
+ST_4 : Operation 202 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(float* %PAR_L_RINV_val_0_0_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str225, i32 0, i32 0, [1 x i8]* @p_str226, [1 x i8]* @p_str227, [1 x i8]* @p_str228, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str229, [11 x i8]* @ScalarProp_str)"   --->   Operation 202 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 203 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.floatP(float* %PAR_L_RINV_val_0_0_out_out, float %PAR_L_RINV_val_2_0_4)"   --->   Operation 203 'write' <Predicate = true> <Delay = 3.63> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 3> <FIFO>
+ST_4 : Operation 204 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(float* %cy2_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str230, i32 0, i32 0, [1 x i8]* @p_str231, [1 x i8]* @p_str232, [1 x i8]* @p_str233, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str234, [11 x i8]* @ScalarProp_str)"   --->   Operation 204 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 205 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.floatP(float* %cy2_out_out, float %PAR_R_CAMM_val_1_2_4)"   --->   Operation 205 'write' <Predicate = true> <Delay = 3.63> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 3> <FIFO>
+ST_4 : Operation 206 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(float* %fy2_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str235, i32 0, i32 0, [1 x i8]* @p_str236, [1 x i8]* @p_str237, [1 x i8]* @p_str238, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str239, [11 x i8]* @ScalarProp_str)"   --->   Operation 206 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 207 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.floatP(float* %fy2_out_out, float %fy2_out_dc)" [stereo_2020/disparity_map.cpp:71]   --->   Operation 207 'write' <Predicate = true> <Delay = 3.63> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 3> <FIFO>
+ST_4 : Operation 208 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(float* %cx2_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str240, i32 0, i32 0, [1 x i8]* @p_str241, [1 x i8]* @p_str242, [1 x i8]* @p_str243, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str244, [11 x i8]* @ScalarProp_str)"   --->   Operation 208 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 209 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.floatP(float* %cx2_out_out, float %PAR_R_CAMM_val_1_2_3)"   --->   Operation 209 'write' <Predicate = true> <Delay = 3.63> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 3> <FIFO>
+ST_4 : Operation 210 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(float* %fx2_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str245, i32 0, i32 0, [1 x i8]* @p_str246, [1 x i8]* @p_str247, [1 x i8]* @p_str248, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str249, [11 x i8]* @ScalarProp_str)"   --->   Operation 210 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 211 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.floatP(float* %fx2_out_out, float %fx2_out_dc)" [stereo_2020/disparity_map.cpp:71]   --->   Operation 211 'write' <Predicate = true> <Delay = 3.63> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 3> <FIFO>
+ST_4 : Operation 212 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(float* %cy1_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str250, i32 0, i32 0, [1 x i8]* @p_str251, [1 x i8]* @p_str252, [1 x i8]* @p_str253, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str254, [11 x i8]* @ScalarProp_str)"   --->   Operation 212 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 213 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.floatP(float* %cy1_out_out, float %PAR_L_CAMM_val_1_2_4)"   --->   Operation 213 'write' <Predicate = true> <Delay = 3.63> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 3> <FIFO>
+ST_4 : Operation 214 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(float* %fy1_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str255, i32 0, i32 0, [1 x i8]* @p_str256, [1 x i8]* @p_str257, [1 x i8]* @p_str258, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str259, [11 x i8]* @ScalarProp_str)"   --->   Operation 214 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 215 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.floatP(float* %fy1_out_out, float %fy1_out_dc)" [stereo_2020/disparity_map.cpp:70]   --->   Operation 215 'write' <Predicate = true> <Delay = 3.63> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 3> <FIFO>
+ST_4 : Operation 216 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(float* %cx1_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str260, i32 0, i32 0, [1 x i8]* @p_str261, [1 x i8]* @p_str262, [1 x i8]* @p_str263, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str264, [11 x i8]* @ScalarProp_str)"   --->   Operation 216 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 217 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.floatP(float* %cx1_out_out, float %PAR_L_CAMM_val_1_2_3)"   --->   Operation 217 'write' <Predicate = true> <Delay = 3.63> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 3> <FIFO>
+ST_4 : Operation 218 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(float* %fx1_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str265, i32 0, i32 0, [1 x i8]* @p_str266, [1 x i8]* @p_str267, [1 x i8]* @p_str268, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str269, [11 x i8]* @ScalarProp_str)"   --->   Operation 218 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 219 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.floatP(float* %fx1_out_out, float %fx1_out_dc)" [stereo_2020/disparity_map.cpp:70]   --->   Operation 219 'write' <Predicate = true> <Delay = 3.63> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 3> <FIFO>
+ST_4 : Operation 220 [1/1] (0.00ns)   --->   "ret void"   --->   Operation 220 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('fy2_out_dc', stereo_2020/disparity_map.cpp:71) with incoming values : ('PAR_R_CAMM_val_1_1_163', stereo_2020/disparity_map.cpp:71) [55]  (1.77 ns)
+
+ <State 2>: 6.77ns
+The critical path consists of the following:
+	'phi' operation ('i') with incoming values : ('i', stereo_2020/disparity_map.cpp:66) [59]  (0 ns)
+	'sub' operation ('tmp_20_i', stereo_2020/disparity_map.cpp:70) [70]  (1.74 ns)
+	'add' operation ('tmp_40_1_i', stereo_2020/disparity_map.cpp:70) [106]  (1.78 ns)
+	'getelementptr' operation ('PAR_R_RM_INV_addr_1', stereo_2020/disparity_map.cpp:73) [129]  (0 ns)
+	'load' operation ('PAR_R_RINV.val[0][1]', stereo_2020/disparity_map.cpp:73) on array 'PAR_R_RM_INV' [130]  (3.25 ns)
+
+ <State 3>: 3.95ns
+The critical path consists of the following:
+	'load' operation ('PAR_L_CAMM.val[0][0]', stereo_2020/disparity_map.cpp:70) on array 'PAR_L_CAMM_RAW' [74]  (3.25 ns)
+	'select' operation ('PAR_L_CAMM_val_0_0_164', stereo_2020/disparity_map.cpp:70) [76]  (0.698 ns)
+
+ <State 4>: 3.63ns
+The critical path consists of the following:
+	'load' operation ('PAR_L_CAMM_val_1_2_3') on local variable 'PAR_L_CAMM.val[1][2]' [193]  (0 ns)
+	fifo write on port 'cx1_out_out' [264]  (3.63 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

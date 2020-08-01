@@ -1,0 +1,204 @@
+
+
+================================================================
+== Vivado HLS Report for 'Loop_disparityMap_la'
+================================================================
+* Date:           Sat Aug  1 16:45:56 2020
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        stereo_2020
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     3.451|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    ?|    ?|    ?|    ?|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------------+-----+-----+----------+-----------+-----------+------+----------+
+        |                          |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        |         Loop Name        | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------------+-----+-----+----------+-----------+-----------+------+----------+
+        |- disparityMap_label1     |    ?|    ?|         ?|          -|          -|     ?|    no    |
+        | + disparityMap_label1.1  |    ?|    ?|         2|          2|          2|     ?|    yes   |
+        +--------------------------+-----+-----+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 2, depth = 2
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 5
+* Pipeline : 1
+  Pipeline-0 : II = 2, D = 2, States = { 3 4 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+	3  / (!exitcond_i)
+3 --> 
+	5  / (exitcond2_i)
+	4  / (!exitcond2_i)
+4 --> 
+	3  / true
+5 --> 
+	2  / true
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.76>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %in_stream_data_V, [5 x i8]* @p_str, i32 1, i32 1, [5 x i8]* @p_str1, i32 0, i32 0, [6 x i8]* @p_str2, [1 x i8]* @p_str3, [1 x i8]* @p_str3, i32 0, i32 0, i32 0, i32 0, [1 x i8]* @p_str3, [1 x i8]* @p_str3)"   --->   Operation 6 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "%p_read126 = call i63 @_ssdm_op_Read.ap_auto.i63(i63 %p_read1)"   --->   Operation 7 'read' 'p_read126' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%p_read_1 = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %p_read)"   --->   Operation 8 'read' 'p_read_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%rows_V_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %rows_V)"   --->   Operation 9 'read' 'rows_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (1.76ns)   --->   "br label %0"   --->   Operation 10 'br' <Predicate = true> <Delay = 1.76>
+
+State 2 <SV = 1> <Delay = 3.45>
+ST_2 : Operation 11 [1/1] (0.00ns)   --->   "%i_op_assign = phi i32 [ 0, %entry ], [ %r, %1 ]"   --->   Operation 11 'phi' 'i_op_assign' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 12 [1/1] (0.00ns)   --->   "%phi_mul = phi i41 [ 0, %entry ], [ %next_mul, %1 ]"   --->   Operation 12 'phi' 'phi_mul' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "%tmp = trunc i41 %phi_mul to i18"   --->   Operation 13 'trunc' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 14 [1/1] (2.90ns)   --->   "%next_mul = add i41 360, %phi_mul"   --->   Operation 14 'add' 'next_mul' <Predicate = true> <Delay = 2.90> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 15 [1/1] (2.47ns)   --->   "%exitcond_i = icmp eq i32 %i_op_assign, %rows_V_read" [stereo_2020/disparity_map.cpp:49]   --->   Operation 15 'icmp' 'exitcond_i' <Predicate = true> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 16 [1/1] (2.55ns)   --->   "%r = add nsw i32 1, %i_op_assign" [stereo_2020/disparity_map.cpp:49]   --->   Operation 16 'add' 'r' <Predicate = true> <Delay = 2.55> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "br i1 %exitcond_i, label %Loop_disparityMap_label1_proc.exit, label %3" [stereo_2020/disparity_map.cpp:49]   --->   Operation 17 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecLoopName([20 x i8]* @p_str11) nounwind" [stereo_2020/disparity_map.cpp:49]   --->   Operation 18 'specloopname' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%tmp_8_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([20 x i8]* @p_str11)" [stereo_2020/disparity_map.cpp:49]   --->   Operation 19 'specregionbegin' 'tmp_8_i' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 -1, i32 1, i32 1, i32 0, [1 x i8]* @p_str3) nounwind" [stereo_2020/disparity_map.cpp:50]   --->   Operation 20 'specpipeline' <Predicate = (!exitcond_i)> <Delay = 0.00>
+ST_2 : Operation 21 [1/1] (1.76ns)   --->   "br label %2" [stereo_2020/disparity_map.cpp:50]   --->   Operation 21 'br' <Predicate = (!exitcond_i)> <Delay = 1.76>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "ret void"   --->   Operation 22 'ret' <Predicate = (exitcond_i)> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 3.45>
+ST_3 : Operation 23 [1/1] (0.00ns)   --->   "%i_op_assign_1 = phi i31 [ 0, %3 ], [ %c, %4 ]"   --->   Operation 23 'phi' 'i_op_assign_1' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 24 [1/1] (0.00ns)   --->   "%lftr_wideiv_cast_i = zext i31 %i_op_assign_1 to i32" [stereo_2020/disparity_map.cpp:50]   --->   Operation 24 'zext' 'lftr_wideiv_cast_i' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 25 [1/1] (2.47ns)   --->   "%exitcond2_i = icmp eq i32 %lftr_wideiv_cast_i, %p_read_1" [stereo_2020/disparity_map.cpp:50]   --->   Operation 25 'icmp' 'exitcond2_i' <Predicate = true> <Delay = 2.47> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.47> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 26 [1/1] (2.52ns)   --->   "%c = add i31 %i_op_assign_1, 1" [stereo_2020/disparity_map.cpp:58]   --->   Operation 26 'add' 'c' <Predicate = true> <Delay = 2.52> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 27 [1/1] (0.00ns)   --->   "br i1 %exitcond2_i, label %1, label %4" [stereo_2020/disparity_map.cpp:50]   --->   Operation 27 'br' <Predicate = true> <Delay = 0.00>
+ST_3 : Operation 28 [1/1] (0.00ns) (grouped into LUT with out node tmp_2)   --->   "%tmp_6 = trunc i31 %i_op_assign_1 to i17" [stereo_2020/disparity_map.cpp:58]   --->   Operation 28 'trunc' 'tmp_6' <Predicate = (!exitcond2_i)> <Delay = 0.00>
+ST_3 : Operation 29 [1/1] (0.00ns)   --->   "%tmp_7 = trunc i31 %i_op_assign_1 to i17" [stereo_2020/disparity_map.cpp:58]   --->   Operation 29 'trunc' 'tmp_7' <Predicate = (!exitcond2_i)> <Delay = 0.00>
+ST_3 : Operation 30 [1/1] (0.00ns)   --->   "%tmp_22_i_cast = call i18 @_ssdm_op_BitConcatenate.i18.i17.i1(i17 %tmp_7, i1 false)" [stereo_2020/disparity_map.cpp:54]   --->   Operation 30 'bitconcatenate' 'tmp_22_i_cast' <Predicate = (!exitcond2_i)> <Delay = 0.00>
+ST_3 : Operation 31 [1/1] (2.13ns)   --->   "%tmp_1 = add i18 %tmp_22_i_cast, %tmp" [stereo_2020/disparity_map.cpp:54]   --->   Operation 31 'add' 'tmp_1' <Predicate = (!exitcond2_i)> <Delay = 2.13> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 32 [1/1] (0.00ns) (grouped into LUT with out node tmp_2)   --->   "%tmp_9 = call i18 @_ssdm_op_BitConcatenate.i18.i17.i1(i17 %tmp_6, i1 false)" [stereo_2020/disparity_map.cpp:55]   --->   Operation 32 'bitconcatenate' 'tmp_9' <Predicate = (!exitcond2_i)> <Delay = 0.00>
+ST_3 : Operation 33 [1/1] (0.00ns) (grouped into LUT with out node tmp_2)   --->   "%tmp_10 = or i18 %tmp_9, 1" [stereo_2020/disparity_map.cpp:55]   --->   Operation 33 'or' 'tmp_10' <Predicate = (!exitcond2_i)> <Delay = 0.00>
+ST_3 : Operation 34 [1/1] (2.13ns) (out node of the LUT)   --->   "%tmp_2 = add i18 %tmp_10, %tmp" [stereo_2020/disparity_map.cpp:55]   --->   Operation 34 'add' 'tmp_2' <Predicate = (!exitcond2_i)> <Delay = 2.13> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 2.55> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 3.25>
+ST_4 : Operation 35 [1/1] (0.00ns)   --->   "%tmp_11_i = call i32 (...)* @_ssdm_op_SpecRegionBegin([12 x i8]* @p_str12)" [stereo_2020/disparity_map.cpp:51]   --->   Operation 35 'specregionbegin' 'tmp_11_i' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 36 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecPipeline(i32 2, i32 1, i32 1, i32 0, [1 x i8]* @p_str3) nounwind" [stereo_2020/disparity_map.cpp:52]   --->   Operation 36 'specpipeline' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 37 [1/1] (0.00ns)   --->   "%dat_V = call i32 @_ssdm_op_Read.axis.volatile.i32P(i32* %in_stream_data_V)" [stereo_2020/disparity_map.cpp:53]   --->   Operation 37 'read' 'dat_V' <Predicate = true> <Delay = 0.00> <Core = "AXI4Stream">   --->   Core 5 'AXI4Stream' <Latency = 0> <II = 1> <Delay = 1.00> <Adapter> <Opcode : >
+ST_4 : Operation 38 [1/1] (0.00ns)   --->   "%tmp_1_cast = zext i18 %tmp_1 to i64" [stereo_2020/disparity_map.cpp:54]   --->   Operation 38 'zext' 'tmp_1_cast' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 39 [1/1] (0.00ns)   --->   "%leftImage_in_V_addr = getelementptr [97200 x i8]* %leftImage_in_V, i64 0, i64 %tmp_1_cast" [stereo_2020/disparity_map.cpp:54]   --->   Operation 39 'getelementptr' 'leftImage_in_V_addr' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 40 [1/1] (0.00ns)   --->   "%rightImage_in_V_addr = getelementptr [97200 x i8]* %rightImage_in_V, i64 0, i64 %tmp_1_cast" [stereo_2020/disparity_map.cpp:56]   --->   Operation 40 'getelementptr' 'rightImage_in_V_addr' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 41 [1/1] (0.00ns)   --->   "%tmp_8 = trunc i32 %dat_V to i8" [stereo_2020/disparity_map.cpp:54]   --->   Operation 41 'trunc' 'tmp_8' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 42 [1/1] (3.25ns)   --->   "store i8 %tmp_8, i8* %leftImage_in_V_addr, align 2" [stereo_2020/disparity_map.cpp:54]   --->   Operation 42 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 97200> <RAM>
+ST_4 : Operation 43 [1/1] (0.00ns)   --->   "%tmp_2_cast = zext i18 %tmp_2 to i64" [stereo_2020/disparity_map.cpp:55]   --->   Operation 43 'zext' 'tmp_2_cast' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 44 [1/1] (0.00ns)   --->   "%leftImage_in_V_addr_1 = getelementptr [97200 x i8]* %leftImage_in_V, i64 0, i64 %tmp_2_cast" [stereo_2020/disparity_map.cpp:55]   --->   Operation 44 'getelementptr' 'leftImage_in_V_addr_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 45 [1/1] (0.00ns)   --->   "%rightImage_in_V_addr_1 = getelementptr [97200 x i8]* %rightImage_in_V, i64 0, i64 %tmp_2_cast" [stereo_2020/disparity_map.cpp:57]   --->   Operation 45 'getelementptr' 'rightImage_in_V_addr_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 46 [1/1] (0.00ns)   --->   "%p_Result_1_i = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %dat_V, i32 8, i32 15)" [stereo_2020/disparity_map.cpp:55]   --->   Operation 46 'partselect' 'p_Result_1_i' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 47 [1/1] (3.25ns)   --->   "store i8 %p_Result_1_i, i8* %leftImage_in_V_addr_1, align 1" [stereo_2020/disparity_map.cpp:55]   --->   Operation 47 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 97200> <RAM>
+ST_4 : Operation 48 [1/1] (0.00ns)   --->   "%p_Result_2_i = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %dat_V, i32 16, i32 23)" [stereo_2020/disparity_map.cpp:56]   --->   Operation 48 'partselect' 'p_Result_2_i' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 49 [1/1] (3.25ns)   --->   "store i8 %p_Result_2_i, i8* %rightImage_in_V_addr, align 2" [stereo_2020/disparity_map.cpp:56]   --->   Operation 49 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 97200> <RAM>
+ST_4 : Operation 50 [1/1] (0.00ns)   --->   "%p_Result_3_i = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %dat_V, i32 24, i32 31)" [stereo_2020/disparity_map.cpp:57]   --->   Operation 50 'partselect' 'p_Result_3_i' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 51 [1/1] (3.25ns)   --->   "store i8 %p_Result_3_i, i8* %rightImage_in_V_addr_1, align 1" [stereo_2020/disparity_map.cpp:57]   --->   Operation 51 'store' <Predicate = true> <Delay = 3.25> <Core = "RAM">   --->   Core 37 'RAM' <Latency = 1> <II = 1> <Delay = 3.25> <Storage> <Opcode : 'load' 'store'> <Ports = 2> <Width = 8> <Depth = 97200> <RAM>
+ST_4 : Operation 52 [1/1] (0.00ns)   --->   "%empty_106 = call i32 (...)* @_ssdm_op_SpecRegionEnd([12 x i8]* @p_str12, i32 %tmp_11_i)" [stereo_2020/disparity_map.cpp:59]   --->   Operation 52 'specregionend' 'empty_106' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 53 [1/1] (0.00ns)   --->   "br label %2" [stereo_2020/disparity_map.cpp:50]   --->   Operation 53 'br' <Predicate = true> <Delay = 0.00>
+
+State 5 <SV = 3> <Delay = 0.00>
+ST_5 : Operation 54 [1/1] (0.00ns)   --->   "%empty = call i32 (...)* @_ssdm_op_SpecRegionEnd([20 x i8]* @p_str11, i32 %tmp_8_i)" [stereo_2020/disparity_map.cpp:60]   --->   Operation 54 'specregionend' 'empty' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 55 [1/1] (0.00ns)   --->   "br label %0" [stereo_2020/disparity_map.cpp:49]   --->   Operation 55 'br' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 1.77ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('r') with incoming values : ('r', stereo_2020/disparity_map.cpp:49) [13]  (1.77 ns)
+
+ <State 2>: 3.45ns
+The critical path consists of the following:
+	'icmp' operation ('exitcond_i', stereo_2020/disparity_map.cpp:49) [17]  (2.47 ns)
+	blocking operation 0.978 ns on control path)
+
+ <State 3>: 3.45ns
+The critical path consists of the following:
+	'icmp' operation ('exitcond2_i', stereo_2020/disparity_map.cpp:50) [28]  (2.47 ns)
+	blocking operation 0.978 ns on control path)
+
+ <State 4>: 3.25ns
+The critical path consists of the following:
+	axis read on port 'in_stream_data_V' (stereo_2020/disparity_map.cpp:53) [34]  (0 ns)
+	'store' operation (stereo_2020/disparity_map.cpp:54) of variable 'tmp_8', stereo_2020/disparity_map.cpp:54 on array 'leftImage_in_V' [43]  (3.25 ns)
+
+ <State 5>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

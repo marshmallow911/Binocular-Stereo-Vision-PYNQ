@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
+  <errorLogs>
+    <logs>
+      <synLog/>
+      <packageLog/>
+    </logs>
+  </errorLogs>
+  <warningLogs>
+    <logs>
+      <synLog>
+        <logs message="WARNING: [RTGEN 206-101] Port 'disparityMap/in_stream_TLAST' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="stereo_2020" solutionName="solution1" date="2020-08-01T16:46:13.863+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Port 'disparityMap/in_stream_TUSER' has no fanin or fanout and is left dangling.&#xD;&#xA;               Please use C simulation to confirm this function argument can be read from or written to." projectName="stereo_2020" solutionName="solution1" date="2020-08-01T16:46:13.824+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'pixel_values_right_V' is power-on initialization." projectName="stereo_2020" solutionName="solution1" date="2020-08-01T16:46:08.301+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'pixel_values_right_V_1' is power-on initialization." projectName="stereo_2020" solutionName="solution1" date="2020-08-01T16:46:08.294+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'pixel_values_right_V_2' is power-on initialization." projectName="stereo_2020" solutionName="solution1" date="2020-08-01T16:46:08.289+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'pixel_values_right_V_3' is power-on initialization." projectName="stereo_2020" solutionName="solution1" date="2020-08-01T16:46:08.284+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'pixel_values_right_V_4' is power-on initialization." projectName="stereo_2020" solutionName="solution1" date="2020-08-01T16:46:08.280+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'pixel_values_right_V_5' is power-on initialization." projectName="stereo_2020" solutionName="solution1" date="2020-08-01T16:46:08.274+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'pixel_values_right_V_6' is power-on initialization." projectName="stereo_2020" solutionName="solution1" date="2020-08-01T16:46:08.269+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'pixel_values_right_V_7' is power-on initialization." projectName="stereo_2020" solutionName="solution1" date="2020-08-01T16:46:08.264+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'pixel_values_right_V_8' is power-on initialization." projectName="stereo_2020" solutionName="solution1" date="2020-08-01T16:46:08.259+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'pixel_values_right_V_9' is power-on initialization." projectName="stereo_2020" solutionName="solution1" date="2020-08-01T16:46:08.254+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'pixel_values_right_V_10' is power-on initialization." projectName="stereo_2020" solutionName="solution1" date="2020-08-01T16:46:08.249+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'pixel_values_right_V_11' is power-on initialization." projectName="stereo_2020" solutionName="solution1" date="2020-08-01T16:46:08.242+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'pixel_values_right_V_12' is power-on initialization." projectName="stereo_2020" solutionName="solution1" date="2020-08-01T16:46:08.236+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'pixel_values_right_V_13' is power-on initialization." projectName="stereo_2020" solutionName="solution1" date="2020-08-01T16:46:08.231+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'pixel_values_right_V_14' is power-on initialization." projectName="stereo_2020" solutionName="solution1" date="2020-08-01T16:46:08.224+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'cost_d_temp_right_V_s' is power-on initialization." projectName="stereo_2020" solutionName="solution1" date="2020-08-01T16:46:08.220+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'cost_d_temp_right_V_1' is power-on initialization." projectName="stereo_2020" solutionName="solution1" date="2020-08-01T16:46:08.216+0800" type="Warning"/>
+        <logs message="WARNING: [RTGEN 206-101] Register 'cost_d_temp_right_V_2' is power-on initialization." projectName="stereo_2020" solutionName="solution1" date="2020-08-01T16:46:08.211+0800" type="Warning"/>
+      </synLog>
+      <packageLog>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'disparityMap_ap_uitofp_4_no_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues." projectName="stereo_2020" solutionName="solution1" date="2020-08-01T16:54:21.792+0800" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'disparityMap_ap_uitodp_4_no_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues." projectName="stereo_2020" solutionName="solution1" date="2020-08-01T16:54:20.597+0800" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'disparityMap_ap_sitofp_4_no_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues." projectName="stereo_2020" solutionName="solution1" date="2020-08-01T16:54:19.367+0800" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'disparityMap_ap_fpext_0_no_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues." projectName="stereo_2020" solutionName="solution1" date="2020-08-01T16:54:18.244+0800" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'disparityMap_ap_fmul_2_max_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues." projectName="stereo_2020" solutionName="solution1" date="2020-08-01T16:54:17.201+0800" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'disparityMap_ap_fdiv_14_no_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues." projectName="stereo_2020" solutionName="solution1" date="2020-08-01T16:54:15.971+0800" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'disparityMap_ap_fcmp_0_no_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues." projectName="stereo_2020" solutionName="solution1" date="2020-08-01T16:54:14.971+0800" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'disparityMap_ap_faddfsub_3_full_dsp_32' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues." projectName="stereo_2020" solutionName="solution1" date="2020-08-01T16:54:13.946+0800" type="Warning"/>
+        <logs message="WARNING: [IP_Flow 19-4832] The IP name 'disparityMap_ap_dcmp_0_no_dsp_64' you have specified is long. The Windows operating system has path length limitations. It is recommended you use shorter names to reduce the likelihood of issues." projectName="stereo_2020" solutionName="solution1" date="2020-08-01T16:54:13.009+0800" type="Warning"/>
+      </packageLog>
+    </logs>
+  </warningLogs>
+</vivadoHLSLog:LogRoot>

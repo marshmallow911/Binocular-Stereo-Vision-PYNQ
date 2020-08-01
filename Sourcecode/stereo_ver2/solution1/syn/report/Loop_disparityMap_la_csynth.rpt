@@ -1,0 +1,184 @@
+
+
+================================================================
+== Vivado HLS Report for 'Loop_disparityMap_la'
+================================================================
+* Date:           Sat Aug  1 16:46:07 2020
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        stereo_2020
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     3.451|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    ?|    ?|    ?|    ?|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +--------------------------+-----+-----+----------+-----------+-----------+------+----------+
+        |                          |  Latency  | Iteration|  Initiation Interval  | Trip |          |
+        |         Loop Name        | min | max |  Latency |  achieved |   target  | Count| Pipelined|
+        +--------------------------+-----+-----+----------+-----------+-----------+------+----------+
+        |- disparityMap_label1     |    ?|    ?|         ?|          -|          -|     ?|    no    |
+        | + disparityMap_label1.1  |    ?|    ?|         2|          2|          2|     ?|    yes   |
+        +--------------------------+-----+-----+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|DSP              |        -|      -|       -|      -|
+|Expression       |        -|      -|       0|    243|
+|FIFO             |        -|      -|       -|      -|
+|Instance         |        -|      -|       -|      -|
+|Memory           |        -|      -|       -|      -|
+|Multiplexer      |        -|      -|       -|    102|
+|Register         |        -|      -|     336|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |        0|      0|     336|    345|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |        0|      0|   ~0   |   ~0  |
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-----------------------------------+----------+-------+---+----+------------+------------+
+    |           Variable Name           | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +-----------------------------------+----------+-------+---+----+------------+------------+
+    |c_fu_215_p2                        |     +    |      0|  0|  38|          31|           1|
+    |next_mul_fu_189_p2                 |     +    |      0|  0|  48|           9|          41|
+    |r_fu_200_p2                        |     +    |      0|  0|  39|           1|          32|
+    |tmp_1_fu_237_p2                    |     +    |      0|  0|  25|          18|          18|
+    |tmp_2_fu_256_p2                    |     +    |      0|  0|  25|          18|          18|
+    |in_stream_data_V_0_load_A          |    and   |      0|  0|   2|           1|           1|
+    |in_stream_data_V_0_load_B          |    and   |      0|  0|   2|           1|           1|
+    |exitcond2_i_fu_210_p2              |   icmp   |      0|  0|  18|          32|          32|
+    |exitcond_i_fu_195_p2               |   icmp   |      0|  0|  18|          32|          32|
+    |in_stream_data_V_0_state_cmp_full  |   icmp   |      0|  0|   8|           2|           1|
+    |ap_block_state1                    |    or    |      0|  0|   2|           1|           1|
+    |tmp_10_fu_250_p2                   |    or    |      0|  0|  18|          18|           1|
+    +-----------------------------------+----------+-------+---+----+------------+------------+
+    |Total                              |          |      0|  0| 243|         164|         179|
+    +-----------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------------+----+-----------+-----+-----------+
+    |             Name            | LUT| Input Size| Bits| Total Bits|
+    +-----------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                    |  33|          6|    1|          6|
+    |ap_done                      |   9|          2|    1|          2|
+    |i_op_assign_1_reg_174        |   9|          2|   31|         62|
+    |i_op_assign_reg_152          |   9|          2|   32|         64|
+    |in_stream_TDATA_blk_n        |   9|          2|    1|          2|
+    |in_stream_data_V_0_data_out  |   9|          2|   32|         64|
+    |in_stream_data_V_0_state     |  15|          3|    2|          6|
+    |phi_mul_reg_163              |   9|          2|   41|         82|
+    +-----------------------------+----+-----------+-----+-----------+
+    |Total                        | 102|         21|  141|        288|
+    +-----------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------------------+----+----+-----+-----------+
+    |             Name             | FF | LUT| Bits| Const Bits|
+    +------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                     |   5|   0|    5|          0|
+    |ap_done_reg                   |   1|   0|    1|          0|
+    |c_reg_342                     |  31|   0|   31|          0|
+    |i_op_assign_1_reg_174         |  31|   0|   31|          0|
+    |i_op_assign_reg_152           |  32|   0|   32|          0|
+    |in_stream_data_V_0_payload_A  |  32|   0|   32|          0|
+    |in_stream_data_V_0_payload_B  |  32|   0|   32|          0|
+    |in_stream_data_V_0_sel_rd     |   1|   0|    1|          0|
+    |in_stream_data_V_0_sel_wr     |   1|   0|    1|          0|
+    |in_stream_data_V_0_state      |   2|   0|    2|          0|
+    |next_mul_reg_325              |  41|   0|   41|          0|
+    |phi_mul_reg_163               |  41|   0|   41|          0|
+    |r_reg_334                     |  32|   0|   32|          0|
+    |tmp_1_reg_347                 |  18|   0|   18|          0|
+    |tmp_2_reg_352                 |  18|   0|   18|          0|
+    |tmp_reg_319                   |  18|   0|   18|          0|
+    +------------------------------+----+----+-----+-----------+
+    |Total                         | 336|   0|  336|          0|
+    +------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------------+-----+-----+------------+----------------------+--------------+
+|         RTL Ports        | Dir | Bits|  Protocol  |     Source Object    |    C Type    |
++--------------------------+-----+-----+------------+----------------------+--------------+
+|ap_clk                    |  in |    1| ap_ctrl_hs | Loop_disparityMap_la | return value |
+|ap_rst                    |  in |    1| ap_ctrl_hs | Loop_disparityMap_la | return value |
+|ap_start                  |  in |    1| ap_ctrl_hs | Loop_disparityMap_la | return value |
+|ap_done                   | out |    1| ap_ctrl_hs | Loop_disparityMap_la | return value |
+|ap_continue               |  in |    1| ap_ctrl_hs | Loop_disparityMap_la | return value |
+|ap_idle                   | out |    1| ap_ctrl_hs | Loop_disparityMap_la | return value |
+|ap_ready                  | out |    1| ap_ctrl_hs | Loop_disparityMap_la | return value |
+|rows_V                    |  in |   32|  ap_stable |        rows_V        |    scalar    |
+|in_stream_TDATA           |  in |   32|    axis    |   in_stream_data_V   |    pointer   |
+|in_stream_TVALID          |  in |    1|    axis    |   in_stream_data_V   |    pointer   |
+|in_stream_TREADY          | out |    1|    axis    |   in_stream_data_V   |    pointer   |
+|p_read                    |  in |   32|   ap_none  |        p_read        |    scalar    |
+|p_read1                   |  in |   63|   ap_none  |        p_read1       |    scalar    |
+|leftImage_in_V_address0   | out |   17|  ap_memory |    leftImage_in_V    |     array    |
+|leftImage_in_V_ce0        | out |    1|  ap_memory |    leftImage_in_V    |     array    |
+|leftImage_in_V_we0        | out |    1|  ap_memory |    leftImage_in_V    |     array    |
+|leftImage_in_V_d0         | out |    8|  ap_memory |    leftImage_in_V    |     array    |
+|leftImage_in_V_address1   | out |   17|  ap_memory |    leftImage_in_V    |     array    |
+|leftImage_in_V_ce1        | out |    1|  ap_memory |    leftImage_in_V    |     array    |
+|leftImage_in_V_we1        | out |    1|  ap_memory |    leftImage_in_V    |     array    |
+|leftImage_in_V_d1         | out |    8|  ap_memory |    leftImage_in_V    |     array    |
+|rightImage_in_V_address0  | out |   17|  ap_memory |    rightImage_in_V   |     array    |
+|rightImage_in_V_ce0       | out |    1|  ap_memory |    rightImage_in_V   |     array    |
+|rightImage_in_V_we0       | out |    1|  ap_memory |    rightImage_in_V   |     array    |
+|rightImage_in_V_d0        | out |    8|  ap_memory |    rightImage_in_V   |     array    |
+|rightImage_in_V_address1  | out |   17|  ap_memory |    rightImage_in_V   |     array    |
+|rightImage_in_V_ce1       | out |    1|  ap_memory |    rightImage_in_V   |     array    |
+|rightImage_in_V_we1       | out |    1|  ap_memory |    rightImage_in_V   |     array    |
+|rightImage_in_V_d1        | out |    8|  ap_memory |    rightImage_in_V   |     array    |
++--------------------------+-----+-----+------------+----------------------+--------------+
+

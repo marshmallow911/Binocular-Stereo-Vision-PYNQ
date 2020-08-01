@@ -1,0 +1,644 @@
+INFO-FLOW: Workspace D:/HLSProjects/stereo_2020/solution1 opened at Thu Jul 30 11:05:31 +0800 2020
+Execute     config_clock -quiet -name default -period 10 -default=false 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib D:/vivado/Vivado/2018.3/common/technology/xilinx/zynq/zynq 
+Execute       source D:/vivado/Vivado/2018.3/common/technology/xilinx/common/xilinx.lib 
+Execute         source D:/vivado/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.lib 
+Execute           source D:/vivado/Vivado/2018.3/common/technology/xilinx/interface/plb46.lib 
+Execute           source D:/vivado/Vivado/2018.3/common/technology/xilinx/interface/fsl.lib 
+Execute           source D:/vivado/Vivado/2018.3/common/technology/xilinx/interface/axi4.lib 
+Execute           source D:/vivado/Vivado/2018.3/common/technology/xilinx/interface/maxi.lib 
+Execute           source D:/vivado/Vivado/2018.3/common/technology/xilinx/interface/saxilite.lib 
+Execute         source D:/vivado/Vivado/2018.3/common/technology/xilinx/common/dsp48.lib 
+Execute         source D:/vivado/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.lib 
+Execute         source D:/vivado/Vivado/2018.3/common/technology/xilinx/ip/xfft.lib 
+Execute         source D:/vivado/Vivado/2018.3/common/technology/xilinx/ip/xfir.lib 
+Execute       source D:/vivado/Vivado/2018.3/common/technology/xilinx/common/xilinx_old.lib 
+Execute       source D:/vivado/Vivado/2018.3/common/technology/xilinx/common/xilinx_vivado.lib 
+Execute       source D:/vivado/Vivado/2018.3/common/technology/xilinx/common/xilinx.hlp 
+Execute         source D:/vivado/Vivado/2018.3/common/technology/xilinx/common/target_info.tcl 
+Execute         source D:/vivado/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source D:/vivado/Vivado/2018.3/common/technology/xilinx/interface/maxi.hlp 
+Execute           source D:/vivado/Vivado/2018.3/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source D:/vivado/Vivado/2018.3/common/technology/xilinx/common/dsp48.hlp 
+Execute       source D:/vivado/Vivado/2018.3/common/technology/xilinx/zynq/dsp48e1.hlp 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute       config_chip_info -quiet -speed medium 
+Execute       source D:/vivado/Vivado/2018.3/common/technology/xilinx/common/xilinx.hlp 
+Execute         source D:/vivado/Vivado/2018.3/common/technology/xilinx/common/target_info.tcl 
+Execute         source D:/vivado/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute           source D:/vivado/Vivado/2018.3/common/technology/xilinx/interface/maxi.hlp 
+Execute           source D:/vivado/Vivado/2018.3/common/technology/xilinx/interface/saxilite.hlp 
+Execute         source D:/vivado/Vivado/2018.3/common/technology/xilinx/common/dsp48.hlp 
+Execute     source D:/vivado/Vivado/2018.3/common/technology/xilinx/zynq/zynq.gen 
+Execute       source D:/vivado/Vivado/2018.3/common/technology/xilinx/common/virtex.gen 
+Execute         source D:/vivado/Vivado/2018.3/common/technology/xilinx/common/xilinx.gen 
+Execute           source D:/vivado/Vivado/2018.3/common/technology/xilinx/interface/plb46.gen 
+Execute           source D:/vivado/Vivado/2018.3/common/technology/xilinx/interface/fsl.gen 
+Execute           source D:/vivado/Vivado/2018.3/common/technology/xilinx/interface/axi4.gen 
+Execute           source D:/vivado/Vivado/2018.3/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute             source D:/vivado/Vivado/2018.3/common/technology/xilinx/interface/saxilite.gen 
+Execute             source D:/vivado/Vivado/2018.3/common/technology/xilinx/interface/maxi.gen 
+Execute           source D:/vivado/Vivado/2018.3/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute           source D:/vivado/Vivado/2018.3/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute           source D:/vivado/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
+Execute           source D:/vivado/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
+Execute           source D:/vivado/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
+Command           ap_source done; 0.242 sec.
+Execute           source D:/vivado/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
+Command         ap_source done; 0.349 sec.
+Execute         source D:/vivado/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
+Command       ap_source done; 0.354 sec.
+Command     ap_source done; 0.354 sec.
+Execute     open_platform DefaultPlatform 
+Execute     import_lib D:/vivado/Vivado/2018.3/common/technology/xilinx/zynq/zynq_fpv6 
+Execute       source D:/vivado/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv7.lib 
+Execute         source D:/vivado/Vivado/2018.3/common/technology/xilinx/common/xilinx_hp.lib 
+Execute       source D:/vivado/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv.hlp 
+Execute         source D:/vivado/Vivado/2018.3/common/technology/xilinx/common/xilinx.hlp 
+Execute           source D:/vivado/Vivado/2018.3/common/technology/xilinx/common/target_info.tcl 
+Execute           source D:/vivado/Vivado/2018.3/common/technology/xilinx/interface/xilinx_interface.hlp 
+Execute             source D:/vivado/Vivado/2018.3/common/technology/xilinx/interface/maxi.hlp 
+Execute             source D:/vivado/Vivado/2018.3/common/technology/xilinx/interface/saxilite.hlp 
+Execute           source D:/vivado/Vivado/2018.3/common/technology/xilinx/common/dsp48.hlp 
+Execute       source D:/vivado/Vivado/2018.3/common/technology/xilinx/zynq/zynq_hp.hlp 
+Execute     source D:/vivado/Vivado/2018.3/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute       source D:/vivado/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
+Execute     set_part xc7z020clg400-1 
+Execute       add_library xilinx/zynq/zynq:xc7z020:clg400:-1 
+Execute         get_default_platform 
+Execute         license_isbetapart xc7z020 
+Command         license_isbetapart done; error code: 1; 
+Execute         get_default_platform 
+Execute         config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute         config_chip_info -quiet -speed slow 
+Execute       add_library xilinx/zynq/zynq_fpv6 
+Execute         get_default_platform 
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg400-1'
+Execute       get_default_platform 
+Execute     get_default_platform 
+Execute     config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute     config_chip_info -quiet -speed slow 
+Execute     config_export -format=ip_catalog 
+Execute     config_export -rtl=verilog 
+Command   open_solution done; 0.526 sec.
+Execute   set_part xc7z020clg400-1 -tool vivado 
+Execute     add_library xilinx/zynq/zynq:xc7z020:clg400:-1 
+Execute       get_default_platform 
+Execute       license_isbetapart xc7z020 
+Command       license_isbetapart done; error code: 1; 
+Execute       get_default_platform 
+Execute       config_chip_info -quiet -resource  {SLICE 13300}  {LUT 53200}     {FF 106400} {DSP48E 220}   {BRAM 280}  
+Execute       config_chip_info -quiet -speed slow 
+Execute     add_library xilinx/zynq/zynq_fpv6 
+Execute       get_default_platform 
+Execute     get_default_platform 
+Command   set_part done; 0.127 sec.
+Execute   create_clock -period 10 -name default 
+Execute   config_export -format ip_catalog -rtl verilog 
+Execute   source ./stereo_2020/solution1/directives.tcl 
+Execute     set_directive_pipeline scaleGray/scale_gray 
+INFO-FLOW: Setting directive 'PIPELINE' 
+Execute     set_directive_pipeline scaleGray/scaleGray_label0 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+Execute     set_directive_pipeline graytorgb/Gray_to_color 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+Execute     set_directive_pipeline graytorgb/graytorgb_label1 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+Execute     set_directive_pipeline disparityMap/mat_matrix 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+Execute     set_directive_pipeline disparityMap/disparityMap_label2 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+Execute   csynth_design 
+Execute     get_config_compile -effort 
+Execute     get_config_compile -enable_clang39 
+Execute     get_config_compile -g 
+Execute     get_config_compile -lm 
+Execute     get_config_compile -ng 
+Execute     get_config_compile -opt_fp 
+Execute     get_config_compile -skip_cdt 
+Execute     get_config_compile -skip_syncheck 
+Execute     get_config_compile -skip_transform 
+Execute     config_compile -blackbox  
+Execute     get_config_compile -keep_printf 
+Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -lm=0 -skip_cdt=0 -skip_transform=0 -ng=0 -g=0 -opt_fp=0 -from_csynth_design=1 
+Execute       get_config_schedule -relax_ii_for_timing 
+INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
+Execute       get_config_schedule -suppress_dependence_error_break 
+INFO: [HLS 200-10] Analyzing design file 'stereo_2020/disparity_map.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling stereo_2020/disparity_map.cpp as C++
+Execute       get_default_platform 
+Execute       is_encrypted stereo_2020/disparity_map.cpp 
+Execute       get_default_platform 
+INFO-FLOW: Running: GCC PP
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "D:/vivado/Vivado/2018.3/msys" -hls  -fno-exceptions  -D__llvm__  -E "stereo_2020/disparity_map.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/vivado/Vivado/2018.3/common/technology/autopilot" -I "D:/vivado/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "D:/HLSProjects/stereo_2020/solution1/.autopilot/db/disparity_map.pp.0.cpp" 
+INFO-FLOW: exec D:/vivado/Vivado/2018.3/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/vivado/Vivado/2018.3/msys -hls -fno-exceptions -D__llvm__ -E stereo_2020/disparity_map.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/vivado/Vivado/2018.3/common/technology/autopilot -I D:/vivado/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o D:/HLSProjects/stereo_2020/solution1/.autopilot/db/disparity_map.pp.0.cpp
+Command       clang done; 2.183 sec.
+Execute       tidy_31 xilinx-xfmat-array-geometry D:/HLSProjects/stereo_2020/solution1/.autopilot/db/disparity_map.pp.0.cpp std=gnu++98 
+INFO-FLOW: exec D:/vivado/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix D:/HLSProjects/stereo_2020/solution1/.autopilot/db/disparity_map.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 1.737 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang -syntaxcheck -src D:/HLSProjects/stereo_2020/solution1/.autopilot/db/disparity_map.pp.0.cpp  -fno-limit-debug-info -gcc-toolchain "D:/vivado/Vivado/2018.3/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/vivado/Vivado/2018.3/common/technology/autopilot" -I "D:/vivado/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "D:/HLSProjects/stereo_2020/solution1/.autopilot/db/disparity_map.pp.0.cpp"  -o "D:/HLSProjects/stereo_2020/solution1/.autopilot/db/useless.bc"  
+INFO-FLOW: exec D:/vivado/Vivado/2018.3/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/vivado/Vivado/2018.3/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/vivado/Vivado/2018.3/common/technology/autopilot -I D:/vivado/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ D:/HLSProjects/stereo_2020/solution1/.autopilot/db/disparity_map.pp.0.cpp -o D:/HLSProjects/stereo_2020/solution1/.autopilot/db/useless.bc
+Command       clang done; 7.204 sec.
+INFO-FLOW: Done: GCC PP time: 11.1 seconds per iteration
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+INFO-FLOW: Setting directive 'PIPELINE' 
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector D:/HLSProjects/stereo_2020/solution1/.autopilot/db/disparity_map.pp.0.cpp std=gnu++98 -directive=D:/HLSProjects/stereo_2020/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec D:/vivado/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=D:/HLSProjects/stereo_2020/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors D:/HLSProjects/stereo_2020/solution1/.autopilot/db/disparity_map.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 1.303 sec.
+INFO-FLOW: Running: tidy-3.1 CDT preprocess
+Execute       tidy_31 xilinx-directive2pragma D:/HLSProjects/stereo_2020/solution1/.autopilot/db/disparity_map.pp.0.cpp std=gnu++98 -directive=D:/HLSProjects/stereo_2020/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec D:/vivado/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=D:/HLSProjects/stereo_2020/solution1/.autopilot/db/all.directive.json -quiet -fix-errors D:/HLSProjects/stereo_2020/solution1/.autopilot/db/disparity_map.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 1.608 sec.
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr D:/vivado/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=D:/HLSProjects/stereo_2020/solution1/.autopilot/db/xilinx-dataflow-lawyer.disparity_map.pp.0.cpp.diag.yml D:/HLSProjects/stereo_2020/solution1/.autopilot/db/disparity_map.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > D:/HLSProjects/stereo_2020/solution1/.autopilot/db/xilinx-dataflow-lawyer.disparity_map.pp.0.cpp.out.log 2> D:/HLSProjects/stereo_2020/solution1/.autopilot/db/xilinx-dataflow-lawyer.disparity_map.pp.0.cpp.err.log 
+Command       ap_eval done; 2.665 sec.
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry D:/HLSProjects/stereo_2020/solution1/.autopilot/db/disparity_map.pp.0.cpp std=gnu++98 
+Execute         ap_eval exec -ignorestderr D:/vivado/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=D:/HLSProjects/stereo_2020/solution1/.autopilot/db/tidy-3.1.disparity_map.pp.0.cpp.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors D:/HLSProjects/stereo_2020/solution1/.autopilot/db/disparity_map.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > D:/HLSProjects/stereo_2020/solution1/.autopilot/db/tidy-3.1.disparity_map.pp.0.cpp.out.log 2> D:/HLSProjects/stereo_2020/solution1/.autopilot/db/tidy-3.1.disparity_map.pp.0.cpp.err.log 
+Command         ap_eval done; 1.69 sec.
+Execute         ap_eval exec -ignorestderr D:/vivado/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter D:/HLSProjects/stereo_2020/solution1/.autopilot/db/disparity_map.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > D:/HLSProjects/stereo_2020/solution1/.autopilot/db/xilinx-legacy-rewriter.disparity_map.pp.0.cpp.out.log 2> D:/HLSProjects/stereo_2020/solution1/.autopilot/db/xilinx-legacy-rewriter.disparity_map.pp.0.cpp.err.log 
+Command         ap_eval done; 2.417 sec.
+Command       tidy_31 done; 4.123 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 8.4 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments D:/HLSProjects/stereo_2020/solution1/.autopilot/db/disparity_map.pragma.1.cpp std=gnu++98 
+INFO-FLOW: exec D:/vivado/Vivado/2018.3/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors D:/HLSProjects/stereo_2020/solution1/.autopilot/db/disparity_map.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 3.737 sec.
+Execute       get_default_platform 
+INFO-FLOW: Processing labels
+Execute       clang -src D:/HLSProjects/stereo_2020/solution1/.autopilot/db/disparity_map.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain D:/vivado/Vivado/2018.3/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "D:/HLSProjects/stereo_2020/solution1/.autopilot/db/disparity_map.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "D:/vivado/Vivado/2018.3/common/technology/autopilot" -I "D:/vivado/Vivado/2018.3/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "D:/HLSProjects/stereo_2020/solution1/.autopilot/db/disparity_map.bc" 
+INFO-FLOW: exec D:/vivado/Vivado/2018.3/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain D:/vivado/Vivado/2018.3/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w D:/HLSProjects/stereo_2020/solution1/.autopilot/db/disparity_map.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I D:/vivado/Vivado/2018.3/common/technology/autopilot -I D:/vivado/Vivado/2018.3/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o D:/HLSProjects/stereo_2020/solution1/.autopilot/db/disparity_map.bc
+Command       clang done; 7.607 sec.
+INFO-FLOW: Linking Debug ...
+Execute       llvm-ld D:/HLSProjects/stereo_2020/solution1/.autopilot/db/disparity_map.g.bc -hls-opt -except-internalize disparityMap -LD:/vivado/Vivado/2018.3/win64/lib -lhlsm -lhlsmc++ -o D:/HLSProjects/stereo_2020/solution1/.autopilot/db/a.g 
+Command       llvm-ld done; 10.558 sec.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:02 ; elapsed = 00:00:45 . Memory (MB): peak = 103.953 ; gain = 18.832
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:02 ; elapsed = 00:00:45 . Memory (MB): peak = 103.953 ; gain = 18.832
+Execute       get_config_sdx -target 
+Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
+Execute         cleanup_all_models 
+INFO: [HLS 200-10] Starting code transformations ...
+Execute         transform -promote-dbg-pointer D:/HLSProjects/stereo_2020/solution1/.autopilot/db/a.pp.bc -o D:/HLSProjects/stereo_2020/solution1/.autopilot/db/a.pp.0.bc -f 
+Command         transform done; 0.381 sec.
+Execute         llvm-ld D:/HLSProjects/stereo_2020/solution1/.autopilot/db/a.pp.0.bc -disable-opt -LD:/vivado/Vivado/2018.3/win64/lib -lfloatconversion -o D:/HLSProjects/stereo_2020/solution1/.autopilot/db/a.g.0 
+Command         llvm-ld done; 1.932 sec.
+INFO-FLOW: Running Standard Transforms...
+Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -lower-blackbox -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top disparityMap -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name D:/HLSProjects/stereo_2020/solution1/.autopilot/db/a.g.0.bc -o D:/HLSProjects/stereo_2020/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
+Command         transform done; 0.81 sec.
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:03 ; elapsed = 00:00:48 . Memory (MB): peak = 153.363 ; gain = 68.242
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO-FLOW: Checking Synthesizability 1/2..
+Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce -check-dspbuiltin D:/HLSProjects/stereo_2020/solution1/.autopilot/db/a.g.1.bc -o D:/HLSProjects/stereo_2020/solution1/.autopilot/db/a.g.2.prechk.bc -f 
+INFO: [XFORM 203-602] Inlining function 'abs_ptype' into 'permeability' (stereo_2020/disparity_map.cpp:23) automatically.
+INFO: [XFORM 203-602] Inlining function 'abs_ptype' into 'cost_d' (stereo_2020/disparity_map.cpp:16) automatically.
+INFO: [XFORM 203-602] Inlining function 'permeability' into 'disparityMap' (stereo_2020/disparity_map.cpp:160) automatically.
+INFO: [XFORM 203-602] Inlining function 'cost_d' into 'disparityMap' (stereo_2020/disparity_map.cpp:178) automatically.
+Command         transform done; 0.559 sec.
+INFO-FLOW: Checking Synthesizability 2/2..
+Execute         transform -syn-check D:/HLSProjects/stereo_2020/solution1/.autopilot/db/a.g.2.prechk.bc -o D:/HLSProjects/stereo_2020/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
+Command         transform done; 0.206 sec.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:03 ; elapsed = 00:00:49 . Memory (MB): peak = 186.777 ; gain = 101.656
+INFO-FLOW: Compiler optimizing ...
+INFO-FLOW: Share syncheck's 1.bc for syn flow: copy D:/HLSProjects/stereo_2020/solution1/.autopilot/db/a.g.1.bc to D:/HLSProjects/stereo_2020/solution1/.autopilot/db/a.o.1.bc
+INFO-FLOW: Presyn 1...
+Execute         transform -hls -tmp D:/HLSProjects/stereo_2020/solution1/.autopilot/db -interface-port-rename -type-info -function-uniquify -directive-preproc -mem2reg -dse -dce -disaggr -scalarrepl -norm-name -deadargelim -mem2reg -instcombine -dce -simplifycfg -auto-rom-infer -dce -function-uniquify -resource-proc -simplifycfg -mem2reg -globaldce -resolve-double-ptr -dce -deadargelim -dce -instcombine -clib-intrinsic-prepare -dce -func-buffer -dce -pag -array-normalize -func-legal -instcombine -gvn -constprop -dce -ptrArgReplace -mem2reg -instcombine -dce -array-seg-normalize -deadargelim -instcombine -dce -pointer-simplify -dce -port-alignment -dce -interface-preproc -data-pack -instcombine -dce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -loop-simplify -indvars -instcombine -gvn -loop-simplify -mem2reg -dce -find-region -instcombine -auto-loop-pipeline -inst-simplify -interface-preproc -cfgopt -instcombine -indvars -auto-loop-unroll -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -clean-region -attach-range -gvn -inst-simplify -constprop -simplifycfg -dce -pointer-simplify -dce -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -auto-par -instcombine -dce -array-transform-check -array-reshape -instcombine -simplifycfg -dce -ptrArgReplace -deadargelim -mem2reg -instcombine -simplifycfg -dce -indvars -loop-simplify -loop-bound -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -duplicate-dataflow-processes -globaldce -instcombine -array-partition -instcombine -simplifycfg -dce -ptrArgReplace -global-constprop -deadargelim -mem2reg -func-legal -instcombine -dce -global-constprop -deadargelim -mem2reg -instcombine -simplifycfg -dce -merge-param -deadargelim -globalopt -constprop -dce -array-promote -constprop -instcombine -dce -ptrArgReplace -mem2reg -instcombine -simplifycfg -dce -mem-intrinsic-preproc -dce -global-internalize -global-privatize -mem2reg -globaldce -promote-global-argument -ptrArgReplace -mem2reg -instcombine -dce -globalopt -mergereturn -simplify-global-access -mem2reg -dce -pointer-simplify -dce -functionattrs -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -inst-simplify -dce -norm-name -function-inline -globaldce -func-inst -constprop -instcombine -simplifycfg -dce -func-legal -dce -loop-bound -arraycheck -bitwidthmin -on-by-dataflow -loop-delete -instcombine -simplifycfg -globaldce -dce -gvn -deadargelim -dce -loop-simplify -clean-region -simplifycfg -propagate-stable-arguments -loop-stream -instcombine -simplifycfg -dce -globaldce -duplicate-dataflow-processes -stream-intrinsic-preproc -dce -check-ap-stream -loop-simplify -eliminate-keepreads -extract-dataflow-in-loop -loop-simplify -dce -gvn -deadargelim -dse -check-dataflow-syntax -legalize-stream-variable -legalize-global -extract-subproc -dce -dead-channel-elimination -canonicalize-gep -globaldce -dce -gvn -deadargelim -annotate-dataflow-channels -scalar-propagation -deadargelim -globaldce -mem2reg -check-dataflow-channels -function-stream -dce -globaldce -prop-fifo-spec -internal-stream-gen -canonicalize-gep -globaldce -dce -gvn -deadargelim -mergereturn -indvars -loop-simplify -instcombine -array-stream -array-seg-normalize -array-partition -func-legal -instcombine -simplifycfg -dce -bundle-memfifo-ops -deadargelim -function-uniquify -directive-preproc -mem2reg -dse -dce -group-axi-access -licm -simplifycfg -dce -loop-delete -norm-name D:/HLSProjects/stereo_2020/solution1/.autopilot/db/a.o.1.bc -o D:/HLSProjects/stereo_2020/solution1/.autopilot/db/a.o.1.tmp.bc -f 
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'dMapout.data.V' (stereo_2020/disparity_map.cpp:81).
+WARNING: [XFORM 203-1103] Ignored data pack directive on non-struct variable 'in_stream.data.V' (stereo_2020/disparity_map.cpp:81).
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'Loop_Col' (stereo_2020/disparity_map.cpp:148) in function 'disparityMap' for pipelining.
+INFO: [HLS 200-489] Unrolling loop 'Loop-2.1.1' (stereo_2020/disparity_map.cpp:154) in function 'disparityMap' completely with a factor of 15.
+INFO: [HLS 200-489] Unrolling loop 'Loop_d' (stereo_2020/disparity_map.cpp:172) in function 'disparityMap' completely with a factor of 16.
+INFO: [XFORM 203-102] Partitioning array 'cost_last_line.V' (stereo_2020/disparity_map.cpp:123) in dimension 2 automatically.
+INFO: [XFORM 203-102] Partitioning array 'pixel_values_right.V' automatically.
+INFO: [XFORM 203-102] Partitioning array 'cost_d_temp_right.V' automatically.
+INFO: [XFORM 203-602] Inlining function 'abs_ptype' into 'permeability' (stereo_2020/disparity_map.cpp:23) automatically.
+INFO: [XFORM 203-602] Inlining function 'abs_ptype' into 'cost_d' (stereo_2020/disparity_map.cpp:16) automatically.
+INFO: [XFORM 203-602] Inlining function 'permeability' into 'disparityMap' (stereo_2020/disparity_map.cpp:160) automatically.
+INFO: [XFORM 203-602] Inlining function 'cost_d' into 'disparityMap' (stereo_2020/disparity_map.cpp:178) automatically.
+Command         transform done; 1.532 sec.
+INFO-FLOW: Presyn 2...
+Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name D:/HLSProjects/stereo_2020/solution1/.autopilot/db/a.o.1.tmp.bc -o D:/HLSProjects/stereo_2020/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (stereo_2020/disparity_map.cpp:148:5) to (stereo_2020/disparity_map.cpp:176:6) in function 'disparityMap'... converting 6 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (stereo_2020/disparity_map.cpp:6:6) to (stereo_2020/disparity_map.cpp:199:7) in function 'disparityMap'... converting 5 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (stereo_2020/disparity_map.cpp:6:6) to (stereo_2020/disparity_map.cpp:195:10) in function 'disparityMap'... converting 5 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (stereo_2020/disparity_map.cpp:6:6) to (stereo_2020/disparity_map.cpp:195:10) in function 'disparityMap'... converting 5 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (stereo_2020/disparity_map.cpp:6:6) to (stereo_2020/disparity_map.cpp:195:10) in function 'disparityMap'... converting 5 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (stereo_2020/disparity_map.cpp:6:6) to (stereo_2020/disparity_map.cpp:195:10) in function 'disparityMap'... converting 5 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (stereo_2020/disparity_map.cpp:6:6) to (stereo_2020/disparity_map.cpp:195:10) in function 'disparityMap'... converting 5 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (stereo_2020/disparity_map.cpp:6:6) to (stereo_2020/disparity_map.cpp:195:10) in function 'disparityMap'... converting 5 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (stereo_2020/disparity_map.cpp:6:6) to (stereo_2020/disparity_map.cpp:195:10) in function 'disparityMap'... converting 5 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (stereo_2020/disparity_map.cpp:6:6) to (stereo_2020/disparity_map.cpp:195:10) in function 'disparityMap'... converting 5 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (stereo_2020/disparity_map.cpp:6:6) to (stereo_2020/disparity_map.cpp:195:10) in function 'disparityMap'... converting 5 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (stereo_2020/disparity_map.cpp:6:6) to (stereo_2020/disparity_map.cpp:195:10) in function 'disparityMap'... converting 5 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (stereo_2020/disparity_map.cpp:6:6) to (stereo_2020/disparity_map.cpp:195:10) in function 'disparityMap'... converting 5 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (stereo_2020/disparity_map.cpp:6:6) to (stereo_2020/disparity_map.cpp:195:10) in function 'disparityMap'... converting 5 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (stereo_2020/disparity_map.cpp:6:6) to (stereo_2020/disparity_map.cpp:195:10) in function 'disparityMap'... converting 5 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (stereo_2020/disparity_map.cpp:6:6) to (stereo_2020/disparity_map.cpp:195:10) in function 'disparityMap'... converting 5 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (stereo_2020/disparity_map.cpp:6:6) to (stereo_2020/disparity_map.cpp:195:10) in function 'disparityMap'... converting 5 basic blocks.
+Command         transform done; 0.843 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:06 ; elapsed = 00:00:51 . Memory (MB): peak = 249.008 ; gain = 163.887
+INFO-FLOW: Building ssdm...
+Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -instcombine -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -bitwidth -loop-bound -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -cdfg-build D:/HLSProjects/stereo_2020/solution1/.autopilot/db/a.o.2.bc -o D:/HLSProjects/stereo_2020/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
+INFO: [XFORM 203-541] Flattening a loop nest 'Loop_Row' (stereo_2020/disparity_map.cpp:145:4) in function 'disparityMap'.
+Command         transform done; 1.692 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:07 ; elapsed = 00:00:53 . Memory (MB): peak = 261.086 ; gain = 175.965
+INFO-FLOW: Finish building internal data model.
+Command       opt_and_import_c done; 7.989 sec.
+Command     elaborate done; 51.704 sec.
+Execute     autosyn -from_csynth_design=1 
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO-FLOW: Synthesizing C/C++ design ...
+INFO: [HLS 200-10] Synthesizing 'disparityMap' ...
+Execute       ap_set_top_model disparityMap 
+Execute       get_model_list disparityMap -filter all-wo-channel -topdown 
+Execute       preproc_iomode -model disparityMap 
+Execute       get_model_list disparityMap -filter all-wo-channel 
+INFO-FLOW: Model list for configure: disparityMap
+INFO-FLOW: Configuring Module : disparityMap ...
+Execute       set_default_model disparityMap 
+Execute       apply_spec_resource_limit disparityMap 
+INFO-FLOW: Model list for preprocess: disparityMap
+INFO-FLOW: Preprocessing Module: disparityMap ...
+Execute       set_default_model disparityMap 
+Execute       cdfg_preprocess -model disparityMap 
+Execute       rtl_gen_preprocess disparityMap 
+INFO-FLOW: Model list for synthesis: disparityMap
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'disparityMap' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model disparityMap 
+Execute       schedule -model disparityMap 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'Loop 1'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 2, Final II = 2, Depth = 2.
+INFO: [SCHED 204-61] Pipelining loop 'Loop_Row_Loop_Col'.
+WARNING: [SCHED 204-68] The II Violation in module 'disparityMap': Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 0)
+   between 'phi' operation ('p_01027_4_14', stereo_2020/disparity_map.cpp:164) with incoming values : ('p_Val2_6', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_1', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_2', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_3', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_4', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_5', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_6', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_7', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_8', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_9', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_s', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_10', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_11', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_12', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_13', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_14', stereo_2020/disparity_map.cpp:164) and 'br' operation (stereo_2020/disparity_map.cpp:176).
+WARNING: [SCHED 204-68] The II Violation in module 'disparityMap': Unable to enforce a carried dependence constraint (II = 1, distance = 1, offset = 1)
+   between 'select' operation ('p_Val2_6_14', stereo_2020/disparity_map.cpp:164) and 'br' operation (stereo_2020/disparity_map.cpp:176).
+WARNING: [SCHED 204-68] The II Violation in module 'disparityMap': Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 0)
+   between 'phi' operation ('p_01027_4_14', stereo_2020/disparity_map.cpp:164) with incoming values : ('p_Val2_6', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_1', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_2', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_3', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_4', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_5', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_6', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_7', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_8', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_9', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_s', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_10', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_11', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_12', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_13', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_14', stereo_2020/disparity_map.cpp:164) and 'br' operation (stereo_2020/disparity_map.cpp:176).
+WARNING: [SCHED 204-68] The II Violation in module 'disparityMap': Unable to enforce a carried dependence constraint (II = 2, distance = 1, offset = 1)
+   between 'select' operation ('p_Val2_6_14', stereo_2020/disparity_map.cpp:164) and 'br' operation (stereo_2020/disparity_map.cpp:176).
+WARNING: [SCHED 204-68] The II Violation in module 'disparityMap': Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 0)
+   between 'phi' operation ('p_01027_4_14', stereo_2020/disparity_map.cpp:164) with incoming values : ('p_Val2_6', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_1', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_2', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_3', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_4', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_5', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_6', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_7', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_8', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_9', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_s', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_10', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_11', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_12', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_13', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_14', stereo_2020/disparity_map.cpp:164) and 'br' operation (stereo_2020/disparity_map.cpp:176).
+WARNING: [SCHED 204-68] The II Violation in module 'disparityMap': Unable to enforce a carried dependence constraint (II = 3, distance = 1, offset = 1)
+   between 'select' operation ('p_Val2_6_14', stereo_2020/disparity_map.cpp:164) and 'br' operation (stereo_2020/disparity_map.cpp:176).
+WARNING: [SCHED 204-68] The II Violation in module 'disparityMap': Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 0)
+   between 'phi' operation ('p_01027_4_14', stereo_2020/disparity_map.cpp:164) with incoming values : ('p_Val2_6', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_1', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_2', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_3', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_4', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_5', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_6', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_7', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_8', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_9', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_s', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_10', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_11', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_12', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_13', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_14', stereo_2020/disparity_map.cpp:164) and 'br' operation (stereo_2020/disparity_map.cpp:176).
+WARNING: [SCHED 204-68] The II Violation in module 'disparityMap': Unable to enforce a carried dependence constraint (II = 4, distance = 1, offset = 1)
+   between 'select' operation ('p_Val2_6_14', stereo_2020/disparity_map.cpp:164) and 'br' operation (stereo_2020/disparity_map.cpp:176).
+WARNING: [SCHED 204-68] The II Violation in module 'disparityMap': Unable to enforce a carried dependence constraint (II = 11, distance = 1, offset = 0)
+   between 'phi' operation ('p_01027_4_14', stereo_2020/disparity_map.cpp:164) with incoming values : ('p_Val2_6', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_1', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_2', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_3', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_4', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_5', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_6', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_7', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_8', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_9', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_s', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_10', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_11', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_12', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_13', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_14', stereo_2020/disparity_map.cpp:164) and 'br' operation (stereo_2020/disparity_map.cpp:176).
+WARNING: [SCHED 204-68] The II Violation in module 'disparityMap': Unable to enforce a carried dependence constraint (II = 11, distance = 1, offset = 1)
+   between 'select' operation ('p_Val2_6_14', stereo_2020/disparity_map.cpp:164) and 'br' operation (stereo_2020/disparity_map.cpp:176).
+WARNING: [SCHED 204-68] The II Violation in module 'disparityMap': Unable to enforce a carried dependence constraint (II = 15, distance = 1, offset = 0)
+   between 'phi' operation ('p_01027_4_14', stereo_2020/disparity_map.cpp:164) with incoming values : ('p_Val2_6', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_1', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_2', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_3', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_4', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_5', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_6', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_7', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_8', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_9', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_s', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_10', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_11', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_12', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_13', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_14', stereo_2020/disparity_map.cpp:164) and 'br' operation (stereo_2020/disparity_map.cpp:176).
+WARNING: [SCHED 204-68] The II Violation in module 'disparityMap': Unable to enforce a carried dependence constraint (II = 15, distance = 1, offset = 1)
+   between 'select' operation ('p_Val2_6_14', stereo_2020/disparity_map.cpp:164) and 'br' operation (stereo_2020/disparity_map.cpp:176).
+WARNING: [SCHED 204-68] The II Violation in module 'disparityMap': Unable to enforce a carried dependence constraint (II = 17, distance = 1, offset = 0)
+   between 'phi' operation ('p_01027_4_14', stereo_2020/disparity_map.cpp:164) with incoming values : ('p_Val2_6', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_1', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_2', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_3', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_4', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_5', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_6', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_7', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_8', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_9', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_s', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_10', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_11', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_12', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_13', stereo_2020/disparity_map.cpp:164) ('p_Val2_6_14', stereo_2020/disparity_map.cpp:164) and 'br' operation (stereo_2020/disparity_map.cpp:176).
+WARNING: [SCHED 204-68] The II Violation in module 'disparityMap': Unable to enforce a carried dependence constraint (II = 17, distance = 1, offset = 1)
+   between 'select' operation ('p_Val2_6_14', stereo_2020/disparity_map.cpp:164) and 'br' operation (stereo_2020/disparity_map.cpp:176).
+INFO: [SCHED 204-61] Pipelining result : Target II = 1, Final II = 18, Depth = 29.
+INFO: [SCHED 204-61] Pipelining loop 'Loop 3'.
+INFO: [SCHED 204-61] Pipelining result : Target II = 4, Final II = 4, Depth = 4.
+WARNING: [SCHED 204-21] Estimated clock period (9.634ns) exceeds the target (target clock period: 10ns, clock uncertainty: 1.25ns, effective delay budget: 8.75ns).
+WARNING: [SCHED 204-21] The critical path in module 'disparityMap' consists of the following:
+	'mul' operation of DSP[149] ('ret_V_mid2', stereo_2020/disparity_map.cpp:151) [143]  (3.36 ns)
+	'add' operation of DSP[149] ('tmp_13', stereo_2020/disparity_map.cpp:151) [149]  (3.02 ns)
+	'getelementptr' operation ('leftImage_V_addr_2', stereo_2020/disparity_map.cpp:151) [151]  (0 ns)
+	'load' operation ('leftImage_V_load', stereo_2020/disparity_map.cpp:151) on array 'leftImage.V', stereo_2020/disparity_map.cpp:98 [152]  (3.25 ns)
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 3.656 sec.
+INFO: [HLS 200-111]  Elapsed time: 56.872 seconds; current allocated memory: 207.518 MB.
+Execute       report -o D:/HLSProjects/stereo_2020/solution1/.autopilot/db/disparityMap.verbose.sched.rpt -verbose -f 
+Command       report done; 0.357 sec.
+Execute       db_write -o D:/HLSProjects/stereo_2020/solution1/.autopilot/db/disparityMap.sched.adb -f 
+Command       db_write done; 0.381 sec.
+INFO-FLOW: Finish scheduling disparityMap.
+Execute       set_default_model disparityMap 
+Execute       bind -model disparityMap 
+BIND OPTION: fu_weight=[ 0.0 -- 1.0 ]
+BIND OPTION: model=disparityMap
+BIND OPTION: reg_weight=[ 0.0 -- 1.0 ]
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.524 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.371 seconds; current allocated memory: 210.798 MB.
+Execute       report -o D:/HLSProjects/stereo_2020/solution1/.autopilot/db/disparityMap.verbose.bind.rpt -verbose -f 
+Command       report done; 1.882 sec.
+Execute       db_write -o D:/HLSProjects/stereo_2020/solution1/.autopilot/db/disparityMap.bind.adb -f 
+Command       db_write done; 0.715 sec.
+INFO-FLOW: Finish binding disparityMap.
+Execute       get_model_list disparityMap -filter all-wo-channel 
+INFO-FLOW: Preprocessing for RTLGen ...
+Execute       rtl_gen_preprocess disparityMap 
+INFO-FLOW: Model list for RTL generation: disparityMap
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'disparityMap' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -prefix 
+Execute       get_config_rtl -auto_prefix 
+Execute       create_rtl_model disparityMap -vendor xilinx -mg_file D:/HLSProjects/stereo_2020/solution1/.autopilot/db/disparityMap.compgen.tcl 
+INFO: [RTGEN 206-500] Setting interface mode on port 'disparityMap/INPUT_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'disparityMap/INPUT_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'disparityMap/INPUT_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'disparityMap/OUTPUT_data_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'disparityMap/OUTPUT_user_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'disparityMap/OUTPUT_last_V' to 'axis' (register, both mode).
+INFO: [RTGEN 206-500] Setting interface mode on port 'disparityMap/rows_V' to 's_axilite & ap_stable'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'disparityMap/cols_V' to 's_axilite & ap_stable'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'disparityMap' to 's_axilite & ap_ctrl_hs'.
+WARNING: [RTGEN 206-101] Register 'cost_d_temp_right_V_s' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cost_d_temp_right_V_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cost_d_temp_right_V_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cost_d_temp_right_V_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cost_d_temp_right_V_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cost_d_temp_right_V_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cost_d_temp_right_V_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cost_d_temp_right_V_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cost_d_temp_right_V_8' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cost_d_temp_right_V_9' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cost_d_temp_right_V_10' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cost_d_temp_right_V_11' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cost_d_temp_right_V_12' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cost_d_temp_right_V_13' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cost_d_temp_right_V_14' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'cost_d_temp_right_V_15' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pixel_values_right_V_14' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pixel_values_right_V_13' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pixel_values_right_V_12' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pixel_values_right_V_11' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pixel_values_right_V_10' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pixel_values_right_V_9' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pixel_values_right_V_8' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pixel_values_right_V_7' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pixel_values_right_V_6' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pixel_values_right_V_5' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pixel_values_right_V_4' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pixel_values_right_V_3' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pixel_values_right_V_2' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pixel_values_right_V_1' is power-on initialization.
+WARNING: [RTGEN 206-101] Register 'pixel_values_right_V' is power-on initialization.
+INFO: [SYN 201-210] Renamed object name 'disparityMap_exponentials_V' to 'disparityMap_expobkb' due to the length limit 20
+INFO: [RTGEN 206-100] Bundling port 'rows_V', 'cols_V' and 'return' to AXI-Lite port CONTROL_BUS.
+INFO: [RTGEN 206-100] Generated clock port 'AXI_LITE_clk' for AXI-Lite bundle 'CONTROL_BUS'.
+INFO: [SYN 201-210] Renamed object name 'disparityMap_leftImage_V' to 'disparityMap_leftcud' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'disparityMap_rightImage_V' to 'disparityMap_righdEe' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'disparityMap_pixel_values_left_V' to 'disparityMap_pixeeOg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'disparityMap_cost_last_line_0_V' to 'disparityMap_costfYi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'disparityMap_cost_last_line_1_V' to 'disparityMap_costg8j' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'disparityMap_cost_last_line_2_V' to 'disparityMap_costhbi' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'disparityMap_cost_last_line_3_V' to 'disparityMap_costibs' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'disparityMap_cost_last_line_4_V' to 'disparityMap_costjbC' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'disparityMap_cost_last_line_5_V' to 'disparityMap_costkbM' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'disparityMap_cost_last_line_6_V' to 'disparityMap_costlbW' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'disparityMap_cost_last_line_7_V' to 'disparityMap_costmb6' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'disparityMap_cost_last_line_8_V' to 'disparityMap_costncg' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'disparityMap_cost_last_line_9_V' to 'disparityMap_costocq' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'disparityMap_cost_last_line_10_V' to 'disparityMap_costpcA' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'disparityMap_cost_last_line_11_V' to 'disparityMap_costqcK' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'disparityMap_cost_last_line_12_V' to 'disparityMap_costrcU' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'disparityMap_cost_last_line_13_V' to 'disparityMap_costsc4' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'disparityMap_cost_last_line_14_V' to 'disparityMap_costtde' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'disparityMap_cost_last_line_15_V' to 'disparityMap_costudo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'disparityMap_mul_40ns_42ns_81_2_1' to 'disparityMap_mul_vdy' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'disparityMap_mac_muladd_18s_18s_18ns_18_1_1' to 'disparityMap_mac_wdI' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'disparityMap_mul_mul_9ns_10ns_18_1_1' to 'disparityMap_mul_xdS' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'disparityMap_mul_mul_10ns_9ns_18_1_1' to 'disparityMap_mul_yd2' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'disparityMap_mac_wdI': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'disparityMap_mul_vdy': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'disparityMap_mul_xdS': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'disparityMap_mul_yd2': 30 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'disparityMap'.
+Command       create_rtl_model done; 0.948 sec.
+INFO: [HLS 200-111]  Elapsed time: 3.601 seconds; current allocated memory: 217.456 MB.
+Execute       source D:/HLSProjects/stereo_2020/solution1/.autopilot/db/disparityMap.rtl_wrap.cfg.tcl 
+Execute       gen_rtl disparityMap -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/HLSProjects/stereo_2020/solution1/syn/systemc/disparityMap -synmodules disparityMap 
+Execute       gen_rtl disparityMap -istop -style xilinx -f -lang vhdl -o D:/HLSProjects/stereo_2020/solution1/syn/vhdl/disparityMap 
+Command       gen_rtl done; 0.543 sec.
+Execute       gen_rtl disparityMap -istop -style xilinx -f -lang vlog -o D:/HLSProjects/stereo_2020/solution1/syn/verilog/disparityMap 
+Command       gen_rtl done; 0.32 sec.
+Execute       export_constraint_db -o D:/HLSProjects/stereo_2020/solution1/.autopilot/db/disparityMap.constraint.tcl -f -tool general 
+Execute       report -model disparityMap -o D:/HLSProjects/stereo_2020/solution1/.autopilot/db/disparityMap.design.xml -verbose -f -dv 
+Command       report done; 0.601 sec.
+Execute       report -model disparityMap -o D:/HLSProjects/stereo_2020/solution1/.autopilot/db/disparityMap.sdaccel.xml -verbose -f -sdaccel 
+Command       report done; 1.104 sec.
+Execute       gen_tb_info disparityMap -o D:/HLSProjects/stereo_2020/solution1/.autopilot/db/disparityMap -p D:/HLSProjects/stereo_2020/solution1/.autopilot/db 
+Execute       report -model disparityMap -o D:/HLSProjects/stereo_2020/solution1/syn/report/disparityMap_csynth.rpt -f 
+Command       report done; 0.234 sec.
+Execute       report -model disparityMap -o D:/HLSProjects/stereo_2020/solution1/syn/report/disparityMap_csynth.xml -f -x 
+Command       report done; 0.645 sec.
+Execute       report -model disparityMap -o D:/HLSProjects/stereo_2020/solution1/.autopilot/db/disparityMap.verbose.rpt -verbose -f 
+Command       report done; 1.377 sec.
+Execute       db_write -model disparityMap -o D:/HLSProjects/stereo_2020/solution1/.autopilot/db/disparityMap.adb -f 
+Command       db_write done; 1.541 sec.
+Execute       sc_get_clocks disparityMap 
+Execute       get_config_export -vivado_clock 
+Execute       sc_get_portdomain disparityMap 
+INFO-FLOW: Model list for RTL component generation: disparityMap
+INFO-FLOW: Handling components in module [disparityMap] ... 
+Execute       source D:/HLSProjects/stereo_2020/solution1/.autopilot/db/disparityMap.compgen.tcl 
+INFO-FLOW: Found component disparityMap_mul_vdy.
+INFO-FLOW: Append model disparityMap_mul_vdy
+INFO-FLOW: Found component disparityMap_mac_wdI.
+INFO-FLOW: Append model disparityMap_mac_wdI
+INFO-FLOW: Found component disparityMap_mul_xdS.
+INFO-FLOW: Append model disparityMap_mul_xdS
+INFO-FLOW: Found component disparityMap_mul_yd2.
+INFO-FLOW: Append model disparityMap_mul_yd2
+INFO-FLOW: Found component disparityMap_expobkb.
+INFO-FLOW: Append model disparityMap_expobkb
+INFO-FLOW: Found component disparityMap_dMap_V.
+INFO-FLOW: Append model disparityMap_dMap_V
+INFO-FLOW: Found component disparityMap_leftcud.
+INFO-FLOW: Append model disparityMap_leftcud
+INFO-FLOW: Found component disparityMap_pixeeOg.
+INFO-FLOW: Append model disparityMap_pixeeOg
+INFO-FLOW: Found component disparityMap_costfYi.
+INFO-FLOW: Append model disparityMap_costfYi
+INFO-FLOW: Found component disparityMap_CONTROL_BUS_s_axi.
+INFO-FLOW: Append model disparityMap_CONTROL_BUS_s_axi
+INFO-FLOW: Append model disparityMap
+INFO-FLOW: Generating RTL model list ...
+INFO-FLOW: All models in this session: disparityMap_mul_vdy disparityMap_mac_wdI disparityMap_mul_xdS disparityMap_mul_yd2 disparityMap_expobkb disparityMap_dMap_V disparityMap_leftcud disparityMap_pixeeOg disparityMap_costfYi disparityMap_CONTROL_BUS_s_axi disparityMap
+INFO-FLOW: To file: write model disparityMap_mul_vdy
+INFO-FLOW: To file: write model disparityMap_mac_wdI
+INFO-FLOW: To file: write model disparityMap_mul_xdS
+INFO-FLOW: To file: write model disparityMap_mul_yd2
+INFO-FLOW: To file: write model disparityMap_expobkb
+INFO-FLOW: To file: write model disparityMap_dMap_V
+INFO-FLOW: To file: write model disparityMap_leftcud
+INFO-FLOW: To file: write model disparityMap_pixeeOg
+INFO-FLOW: To file: write model disparityMap_costfYi
+INFO-FLOW: To file: write model disparityMap_CONTROL_BUS_s_axi
+INFO-FLOW: To file: write model disparityMap
+INFO-FLOW: Finished generating RTL model list.
+
+
+INFO-FLOW: RTL Generation done.
+INFO-FLOW: CAS Generation done.
+INFO-FLOW: CBC Generation done.
+INFO-FLOW: DBG:CMD: auto_generate_csynth_design
+INFO-FLOW: DBG:CMD:     auto_generate --sim-model -phase csynth_design -d D:/HLSProjects/stereo_2020/solution1
+Execute       source D:/HLSProjects/stereo_2020/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib D:/HLSProjects/stereo_2020/solution1/.autopilot/db/global.setting.tcl
+Execute       source D:/vivado/Vivado/2018.3/common/technology/generic/autopilot/common.gen 
+Execute         source D:/vivado/Vivado/2018.3/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source D:/vivado/Vivado/2018.3/common/technology/generic/autopilot/op.gen 
+Execute       source D:/vivado/Vivado/2018.3/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source D:/vivado/Vivado/2018.3/common/technology/generic/autopilot/interface.gen 
+Execute       source D:/HLSProjects/stereo_2020/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/vivado/Vivado/2018.3/common/technology/xilinx/zynq/zynq.gen 
+Execute         source D:/vivado/Vivado/2018.3/common/technology/xilinx/common/virtex.gen 
+Execute           source D:/vivado/Vivado/2018.3/common/technology/xilinx/common/xilinx.gen 
+Execute             source D:/vivado/Vivado/2018.3/common/technology/xilinx/interface/plb46.gen 
+Execute             source D:/vivado/Vivado/2018.3/common/technology/xilinx/interface/fsl.gen 
+Execute             source D:/vivado/Vivado/2018.3/common/technology/xilinx/interface/axi4.gen 
+Execute             source D:/vivado/Vivado/2018.3/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source D:/vivado/Vivado/2018.3/common/technology/xilinx/interface/saxilite.gen 
+Execute               source D:/vivado/Vivado/2018.3/common/technology/xilinx/interface/maxi.gen 
+Execute             source D:/vivado/Vivado/2018.3/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source D:/vivado/Vivado/2018.3/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source D:/vivado/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source D:/vivado/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
+Execute             source D:/vivado/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
+Command             ap_source done; 0.184 sec.
+Execute             source D:/vivado/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source done; 0.32 sec.
+Execute           source D:/vivado/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.325 sec.
+Command       ap_source done; 0.325 sec.
+Execute       source D:/vivado/Vivado/2018.3/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute         source D:/vivado/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=1 export=0 expOnly=0 dstVlogDir=syn/verilog
+Execute       source D:/HLSProjects/stereo_2020/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/HLSProjects/stereo_2020/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/HLSProjects/stereo_2020/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/HLSProjects/stereo_2020/solution1/.autopilot/db/disparityMap.compgen.tcl 
+INFO: [RTMG 210-282] Generating pipelined core: 'disparityMap_mul_vdy_MulnS_0'
+INFO: [RTMG 210-279] Implementing memory 'disparityMap_expobkb_rom' using auto ROMs.
+INFO: [RTMG 210-278] Implementing memory 'disparityMap_dMap_V_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'disparityMap_leftcud_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'disparityMap_pixeeOg_ram (RAM)' using block RAMs.
+INFO: [RTMG 210-278] Implementing memory 'disparityMap_costfYi_ram (RAM)' using block RAMs.
+Execute         source ./CONTROL_BUS.slave.tcl 
+Execute         is_m_axi_addr64 
+Command       ap_source done; 0.622 sec.
+INFO-FLOW: DBG:CMD:     auto_generate -export -impltomg_flag -rtl both -tool Vivado -pcore_version 1.00.a -phase csynth_design -d D:/HLSProjects/stereo_2020/solution1
+Execute       source D:/HLSProjects/stereo_2020/solution1/.autopilot/db/global.setting.tcl 
+INFO-FLOW: DBG:CMD: read_platform_lib D:/HLSProjects/stereo_2020/solution1/.autopilot/db/global.setting.tcl
+Execute       source D:/vivado/Vivado/2018.3/common/technology/generic/autopilot/common.gen 
+Execute         source D:/vivado/Vivado/2018.3/common/technology/generic/autopilot/APCoreGen.gen 
+Execute       source D:/vivado/Vivado/2018.3/common/technology/generic/autopilot/op.gen 
+Execute       source D:/vivado/Vivado/2018.3/common/technology/generic/autopilot/op_simcore.gen 
+Execute       source D:/vivado/Vivado/2018.3/common/technology/generic/autopilot/interface.gen 
+Execute       source D:/HLSProjects/stereo_2020/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/vivado/Vivado/2018.3/common/technology/xilinx/zynq/zynq.gen 
+Execute         source D:/vivado/Vivado/2018.3/common/technology/xilinx/common/virtex.gen 
+Execute           source D:/vivado/Vivado/2018.3/common/technology/xilinx/common/xilinx.gen 
+Execute             source D:/vivado/Vivado/2018.3/common/technology/xilinx/interface/plb46.gen 
+Execute             source D:/vivado/Vivado/2018.3/common/technology/xilinx/interface/fsl.gen 
+Execute             source D:/vivado/Vivado/2018.3/common/technology/xilinx/interface/axi4.gen 
+Execute             source D:/vivado/Vivado/2018.3/common/technology/xilinx/interface/nativeAXI4.gen 
+Execute               source D:/vivado/Vivado/2018.3/common/technology/xilinx/interface/saxilite.gen 
+Execute               source D:/vivado/Vivado/2018.3/common/technology/xilinx/interface/maxi.gen 
+Execute             source D:/vivado/Vivado/2018.3/common/technology/xilinx/scripts/xilinxcoregen.gen 
+Execute             source D:/vivado/Vivado/2018.3/common/technology/xilinx/interface/XilEDKCoreGen.gen 
+Execute             source D:/vivado/Vivado/2018.3/common/technology/xilinx/ip/dds_compiler.gen 
+Execute             source D:/vivado/Vivado/2018.3/common/technology/xilinx/ip/util.gen 
+Execute             source D:/vivado/Vivado/2018.3/common/technology/xilinx/ip/xfft.gen 
+Command             ap_source done; 0.37 sec.
+Execute             source D:/vivado/Vivado/2018.3/common/technology/xilinx/ip/xfir.gen 
+Command           ap_source done; 0.516 sec.
+Execute           source D:/vivado/Vivado/2018.3/common/technology/xilinx/common/dsp48.gen 
+Command         ap_source done; 0.526 sec.
+Command       ap_source done; 0.528 sec.
+Execute       source D:/vivado/Vivado/2018.3/common/technology/xilinx/zynq/zynq_fpv6.gen 
+Execute         source D:/vivado/Vivado/2018.3/common/technology/xilinx/common/xilinx_fpv6.gen 
+INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=disparityMap xml_exists=0
+Execute       source D:/HLSProjects/stereo_2020/solution1/.autopilot/db/disparityMap.rtl_wrap.cfg.tcl 
+Execute       source D:/HLSProjects/stereo_2020/solution1/.autopilot/db/disparityMap.rtl_wrap.cfg.tcl 
+Execute       source D:/HLSProjects/stereo_2020/solution1/.autopilot/db/disparityMap.rtl_wrap.cfg.tcl 
+Execute       source D:/HLSProjects/stereo_2020/solution1/.autopilot/db/disparityMap.tbgen.tcl 
+Execute       source D:/HLSProjects/stereo_2020/solution1/.autopilot/db/disparityMap.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       export_impl_rtl
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.verilog
+Execute       source D:/HLSProjects/stereo_2020/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/HLSProjects/stereo_2020/solution1/.autopilot/db/disparityMap.compgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=1 expOnly=1 dstVlogDir=impl/.pcores/verilog
+Execute       source D:/HLSProjects/stereo_2020/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/HLSProjects/stereo_2020/solution1/.autopilot/db/disparityMap.compgen.tcl 
+INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
+Execute       source D:/HLSProjects/stereo_2020/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/HLSProjects/stereo_2020/solution1/.autopilot/db/disparityMap.compgen.tcl 
+Execute       source D:/HLSProjects/stereo_2020/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/HLSProjects/stereo_2020/solution1/.autopilot/db/disparityMap.constraint.tcl 
+Execute       get_config_export -vivado_clock 
+Execute       source D:/HLSProjects/stereo_2020/solution1/.autopilot/db/disparityMap.tbgen.tcl 
+INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=12
+INFO-FLOW: DBG:CMD: Skipping loadAnalyze_DB, #g_database=8
+INFO-FLOW: DBG:CMD:       generate_json is_phase_csynth=1 g_has_adaptors=false generate_bd_files=1 #modelList=11 #gSsdmPorts=12
+Execute       source D:/HLSProjects/stereo_2020/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/HLSProjects/stereo_2020/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/HLSProjects/stereo_2020/solution1/.autopilot/db/disparityMap.tbgen.tcl 
+Execute       source D:/HLSProjects/stereo_2020/solution1/.autopilot/db/disparityMap.tbgen.tcl 
+Execute       source D:/HLSProjects/stereo_2020/solution1/.autopilot/db/disparityMap.tbgen.tcl 
+Execute       source D:/HLSProjects/stereo_2020/solution1/.autopilot/db/global.setting.tcl 
+Execute       get_config_sdx -target 
+Execute       get_config_export -xo 
+Execute       source D:/HLSProjects/stereo_2020/solution1/.autopilot/db/global.setting.tcl 
+Execute       source D:/HLSProjects/stereo_2020/solution1/.autopilot/db/disparityMap.constraint.tcl 
+Execute       sc_get_clocks disparityMap 
+Execute       source D:/HLSProjects/stereo_2020/solution1/.autopilot/db/global.setting.tcl 
+Execute       get_config_sdx -target 
+Execute       get_config_sdx -profile 
+Execute       ::config_rtl 
+INFO-FLOW: DBG:CMD: add_json_sdx_info kernel file does not exist: D:/HLSProjects/stereo_2020/solution1/.autopilot/db/kernel.internal.xml
+INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:22 ; elapsed = 00:01:12 . Memory (MB): peak = 291.176 ; gain = 206.055
+INFO: [SYSC 207-301] Generating SystemC RTL for disparityMap.
+INFO: [VHDL 208-304] Generating VHDL RTL for disparityMap.
+INFO: [VLOG 209-307] Generating Verilog RTL for disparityMap.
+Command     autosyn done; 18.956 sec.
+Execute     get_part 
+Execute     get_config_export -sdx_tcl 
+Command   csynth_design done; 70.692 sec.
+Command ap_source done; 71.382 sec.
+Execute cleanup_all 

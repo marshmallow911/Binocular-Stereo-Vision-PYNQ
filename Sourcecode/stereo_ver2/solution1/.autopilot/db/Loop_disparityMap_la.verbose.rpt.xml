@@ -1,0 +1,167 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'Loop_disparityMap_la'" level="0">
+<item name = "Date">Sat Aug  1 16:46:07 2020
+</item>
+<item name = "Version">2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)</item>
+<item name = "Project">stereo_2020</item>
+<item name = "Solution">solution1</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 3.451, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">?, ?, ?, ?, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+<column name="- disparityMap_label1">?, ?, ?, -, -, ?, no</column>
+<column name=" + disparityMap_label1.1">?, ?, 2, 2, 2, ?, yes</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="5">Name, BRAM_18K, DSP48E, FF, LUT</keys>
+<column name="DSP">-, -, -, -</column>
+<column name="Expression">-, -, 0, 243</column>
+<column name="FIFO">-, -, -, -</column>
+<column name="Instance">-, -, -, -</column>
+<column name="Memory">-, -, -, -</column>
+<column name="Multiplexer">-, -, -, 102</column>
+<column name="Register">-, -, 336, -</column>
+<specialColumn name="Available">280, 220, 106400, 53200</specialColumn>
+<specialColumn name="Utilization (%)">0, 0, ~0, ~0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="6">Instance, Module, BRAM_18K, DSP48E, FF, LUT</keys>
+</table>
+</item>
+<item name = "DSP48"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="9">Memory, Module, BRAM_18K, FF, LUT, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="7">Name, BRAM_18K, FF, LUT, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="c_fu_215_p2">+, 0, 0, 38, 31, 1</column>
+<column name="next_mul_fu_189_p2">+, 0, 0, 48, 9, 41</column>
+<column name="r_fu_200_p2">+, 0, 0, 39, 1, 32</column>
+<column name="tmp_1_fu_237_p2">+, 0, 0, 25, 18, 18</column>
+<column name="tmp_2_fu_256_p2">+, 0, 0, 25, 18, 18</column>
+<column name="in_stream_data_V_0_load_A">and, 0, 0, 2, 1, 1</column>
+<column name="in_stream_data_V_0_load_B">and, 0, 0, 2, 1, 1</column>
+<column name="exitcond2_i_fu_210_p2">icmp, 0, 0, 18, 32, 32</column>
+<column name="exitcond_i_fu_195_p2">icmp, 0, 0, 18, 32, 32</column>
+<column name="in_stream_data_V_0_state_cmp_full">icmp, 0, 0, 8, 2, 1</column>
+<column name="ap_block_state1">or, 0, 0, 2, 1, 1</column>
+<column name="tmp_10_fu_250_p2">or, 0, 0, 18, 18, 1</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">33, 6, 1, 6</column>
+<column name="ap_done">9, 2, 1, 2</column>
+<column name="i_op_assign_1_reg_174">9, 2, 31, 62</column>
+<column name="i_op_assign_reg_152">9, 2, 32, 64</column>
+<column name="in_stream_TDATA_blk_n">9, 2, 1, 2</column>
+<column name="in_stream_data_V_0_data_out">9, 2, 32, 64</column>
+<column name="in_stream_data_V_0_state">15, 3, 2, 6</column>
+<column name="phi_mul_reg_163">9, 2, 41, 82</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="ap_CS_fsm">5, 0, 5, 0</column>
+<column name="ap_done_reg">1, 0, 1, 0</column>
+<column name="c_reg_342">31, 0, 31, 0</column>
+<column name="i_op_assign_1_reg_174">31, 0, 31, 0</column>
+<column name="i_op_assign_reg_152">32, 0, 32, 0</column>
+<column name="in_stream_data_V_0_payload_A">32, 0, 32, 0</column>
+<column name="in_stream_data_V_0_payload_B">32, 0, 32, 0</column>
+<column name="in_stream_data_V_0_sel_rd">1, 0, 1, 0</column>
+<column name="in_stream_data_V_0_sel_wr">1, 0, 1, 0</column>
+<column name="in_stream_data_V_0_state">2, 0, 2, 0</column>
+<column name="next_mul_reg_325">41, 0, 41, 0</column>
+<column name="phi_mul_reg_163">41, 0, 41, 0</column>
+<column name="r_reg_334">32, 0, 32, 0</column>
+<column name="tmp_1_reg_347">18, 0, 18, 0</column>
+<column name="tmp_2_reg_352">18, 0, 18, 0</column>
+<column name="tmp_reg_319">18, 0, 18, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, Loop_disparityMap_la, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, Loop_disparityMap_la, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, Loop_disparityMap_la, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, Loop_disparityMap_la, return value</column>
+<column name="ap_continue">in, 1, ap_ctrl_hs, Loop_disparityMap_la, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, Loop_disparityMap_la, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, Loop_disparityMap_la, return value</column>
+<column name="rows_V">in, 32, ap_stable, rows_V, scalar</column>
+<column name="in_stream_TDATA">in, 32, axis, in_stream_data_V, pointer</column>
+<column name="in_stream_TVALID">in, 1, axis, in_stream_data_V, pointer</column>
+<column name="in_stream_TREADY">out, 1, axis, in_stream_data_V, pointer</column>
+<column name="p_read">in, 32, ap_none, p_read, scalar</column>
+<column name="p_read1">in, 63, ap_none, p_read1, scalar</column>
+<column name="leftImage_in_V_address0">out, 17, ap_memory, leftImage_in_V, array</column>
+<column name="leftImage_in_V_ce0">out, 1, ap_memory, leftImage_in_V, array</column>
+<column name="leftImage_in_V_we0">out, 1, ap_memory, leftImage_in_V, array</column>
+<column name="leftImage_in_V_d0">out, 8, ap_memory, leftImage_in_V, array</column>
+<column name="leftImage_in_V_address1">out, 17, ap_memory, leftImage_in_V, array</column>
+<column name="leftImage_in_V_ce1">out, 1, ap_memory, leftImage_in_V, array</column>
+<column name="leftImage_in_V_we1">out, 1, ap_memory, leftImage_in_V, array</column>
+<column name="leftImage_in_V_d1">out, 8, ap_memory, leftImage_in_V, array</column>
+<column name="rightImage_in_V_address0">out, 17, ap_memory, rightImage_in_V, array</column>
+<column name="rightImage_in_V_ce0">out, 1, ap_memory, rightImage_in_V, array</column>
+<column name="rightImage_in_V_we0">out, 1, ap_memory, rightImage_in_V, array</column>
+<column name="rightImage_in_V_d0">out, 8, ap_memory, rightImage_in_V, array</column>
+<column name="rightImage_in_V_address1">out, 17, ap_memory, rightImage_in_V, array</column>
+<column name="rightImage_in_V_ce1">out, 1, ap_memory, rightImage_in_V, array</column>
+<column name="rightImage_in_V_we1">out, 1, ap_memory, rightImage_in_V, array</column>
+<column name="rightImage_in_V_d1">out, 8, ap_memory, rightImage_in_V, array</column>
+</table>
+</item>
+</section>
+</profile>

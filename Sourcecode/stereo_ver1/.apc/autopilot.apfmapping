@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="disparity_map.cpp" path="D:\HLSProjects\stereo_2020\disparity_map.cpp"/>
+  </source>
+  <testbench>
+    <originFiles name="disparity_map_test.cpp" path="D:\HLSProjects\stereo_2020\disparity_map_test.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

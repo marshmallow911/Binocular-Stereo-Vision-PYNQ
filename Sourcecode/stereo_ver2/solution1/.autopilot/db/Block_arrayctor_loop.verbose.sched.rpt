@@ -1,0 +1,125 @@
+
+
+================================================================
+== Vivado HLS Report for 'Block_arrayctor_loop'
+================================================================
+* Date:           Sat Aug  1 16:45:56 2020
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        stereo_2020
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.510|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    1|    1|    1|    1|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 
+	2  / true
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 8.51>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%rows_V_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %rows_V)" [stereo_2020/disparity_map.cpp:45]   --->   Operation 3 'read' 'rows_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%cols_V_read = call i32 @_ssdm_op_Read.ap_auto.i32(i32 %cols_V)" [stereo_2020/disparity_map.cpp:45]   --->   Operation 4 'read' 'cols_V_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%col_packets = call i31 @_ssdm_op_PartSelect.i31.i32.i32.i32(i32 %cols_V_read, i32 1, i32 31)" [stereo_2020/disparity_map.cpp:45]   --->   Operation 5 'partselect' 'col_packets' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%col_packets_1 = zext i31 %col_packets to i32" [stereo_2020/disparity_map.cpp:45]   --->   Operation 6 'zext' 'col_packets_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (8.51ns)   --->   "%packets = mul i32 %col_packets_1, %rows_V_read" [stereo_2020/disparity_map.cpp:46]   --->   Operation 7 'mul' 'packets' <Predicate = true> <Delay = 8.51> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.51> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
+
+State 2 <SV = 1> <Delay = 3.63>
+ST_2 : Operation 8 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecInterface(i32* %packets_out_out, [8 x i8]* @ap_fifo_str, i32 0, i32 0, [1 x i8]* @p_str126, i32 0, i32 0, [1 x i8]* @p_str127, [1 x i8]* @p_str128, [1 x i8]* @p_str129, i32 2, i32 2, i32 16, i32 16, [1 x i8]* @p_str130, [1 x i8]* @p_str131)"   --->   Operation 8 'specinterface' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 9 [1/1] (0.00ns)   --->   "%tmp_cast_out = zext i31 %col_packets to i63" [stereo_2020/disparity_map.cpp:45]   --->   Operation 9 'zext' 'tmp_cast_out' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 10 [1/1] (3.63ns)   --->   "call void @_ssdm_op_Write.ap_fifo.i32P(i32* %packets_out_out, i32 %packets)" [stereo_2020/disparity_map.cpp:46]   --->   Operation 10 'write' <Predicate = true> <Delay = 3.63> <Core = "FIFO">   --->   Core 32 'FIFO' <Latency = 0> <II = 1> <Delay = 3.63> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 32> <Depth = 3> <FIFO>
+ST_2 : Operation 11 [1/1] (0.00ns)   --->   "%mrv = insertvalue { i32, i63 } undef, i32 %col_packets_1, 0" [stereo_2020/disparity_map.cpp:45]   --->   Operation 11 'insertvalue' 'mrv' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 12 [1/1] (0.00ns)   --->   "%mrv_1 = insertvalue { i32, i63 } %mrv, i63 %tmp_cast_out, 1" [stereo_2020/disparity_map.cpp:45]   --->   Operation 12 'insertvalue' 'mrv_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "ret { i32, i63 } %mrv_1" [stereo_2020/disparity_map.cpp:45]   --->   Operation 13 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 8.51ns
+The critical path consists of the following:
+	wire read on port 'rows_V' (stereo_2020/disparity_map.cpp:45) [5]  (0 ns)
+	'mul' operation ('packets', stereo_2020/disparity_map.cpp:46) [10]  (8.51 ns)
+
+ <State 2>: 3.63ns
+The critical path consists of the following:
+	fifo write on port 'packets_out_out' (stereo_2020/disparity_map.cpp:46) [11]  (3.63 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

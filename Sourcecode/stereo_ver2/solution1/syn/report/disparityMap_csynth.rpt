@@ -1,0 +1,249 @@
+
+
+================================================================
+== Vivado HLS Report for 'disparityMap'
+================================================================
+* Date:           Sat Aug  1 16:46:14 2020
+
+* Version:        2018.3 (Build 2405991 on Thu Dec 06 23:56:15 MST 2018)
+* Project:        stereo_2020
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z020clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     9.379|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+----------+
+    |  Latency  |  Interval | Pipeline |
+    | min | max | min | max |   Type   |
+    +-----+-----+-----+-----+----------+
+    |    ?|    ?|    ?|    ?| dataflow |
+    +-----+-----+-----+-----+----------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------------+----------------------+-----+-----+-----+-----+---------+
+        |                         |                      |  Latency  |  Interval | Pipeline|
+        |         Instance        |        Module        | min | max | min | max |   Type  |
+        +-------------------------+----------------------+-----+-----+-----+-----+---------+
+        |Loop_Loop_Row_proc_U0    |Loop_Loop_Row_proc    |    ?|    ?|    ?|    ?|   none  |
+        |Loop_2_proc_U0           |Loop_2_proc           |    5|    5|    5|    5|   none  |
+        |Loop_4_proc_U0           |Loop_4_proc           |    ?|    ?|    ?|    ?|   none  |
+        |Loop_disparityMap_la_U0  |Loop_disparityMap_la  |    ?|    ?|    ?|    ?|   none  |
+        |Block_arrayctor_loop_U0  |Block_arrayctor_loop  |    1|    1|    1|    1|   none  |
+        +-------------------------+----------------------+-----+-----+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+-------+
+|       Name      | BRAM_18K| DSP48E|   FF   |  LUT  |
++-----------------+---------+-------+--------+-------+
+|DSP              |        -|      -|       -|      -|
+|Expression       |        -|      -|       0|     68|
+|FIFO             |        0|      -|     150|   1327|
+|Instance         |       20|     73|   20272|  20369|
+|Memory           |      128|      -|       0|      0|
+|Multiplexer      |        -|      -|       -|     90|
+|Register         |        -|      -|      13|      -|
++-----------------+---------+-------+--------+-------+
+|Total            |      148|     73|   20435|  21854|
++-----------------+---------+-------+--------+-------+
+|Available        |      280|    220|  106400|  53200|
++-----------------+---------+-------+--------+-------+
+|Utilization (%)  |       52|     33|      19|     41|
++-----------------+---------+-------+--------+-------+
+
++ Detail: 
+    * Instance: 
+    +----------------------------------+--------------------------------+---------+-------+-------+-------+
+    |             Instance             |             Module             | BRAM_18K| DSP48E|   FF  |  LUT  |
+    +----------------------------------+--------------------------------+---------+-------+-------+-------+
+    |Block_arrayctor_loop_U0           |Block_arrayctor_loop            |        0|      4|      4|     64|
+    |Loop_2_proc_U0                    |Loop_2_proc                     |        0|      0|   1227|    532|
+    |Loop_4_proc_U0                    |Loop_4_proc                     |        0|      4|    432|    769|
+    |Loop_Loop_Row_proc_U0             |Loop_Loop_Row_proc              |       20|     65|  18161|  18491|
+    |Loop_disparityMap_la_U0           |Loop_disparityMap_la            |        0|      0|    336|    345|
+    |disparityMap_CONTROL_BUS_s_axi_U  |disparityMap_CONTROL_BUS_s_axi  |        0|      0|    112|    168|
+    +----------------------------------+--------------------------------+---------+-------+-------+-------+
+    |Total                             |                                |       20|     73|  20272|  20369|
+    +----------------------------------+--------------------------------+---------+-------+-------+-------+
+
+    * DSP48: 
+    N/A
+
+    * Memory: 
+    +-------------------+----------------------+---------+---+----+-------+-----+------+-------------+
+    |       Memory      |        Module        | BRAM_18K| FF| LUT| Words | Bits| Banks| W*Bits*Banks|
+    +-------------------+----------------------+---------+---+----+-------+-----+------+-------------+
+    |leftImage_in_V_U   |disparityMap_leftKfY  |       64|  0|   0|  97200|    8|     2|      1555200|
+    |rightImage_in_V_U  |disparityMap_leftKfY  |       64|  0|   0|  97200|    8|     2|      1555200|
+    +-------------------+----------------------+---------+---+----+-------+-----+------+-------------+
+    |Total              |                      |      128|  0|   0| 194400|   16|     4|      3110400|
+    +-------------------+----------------------+---------+---+----+-------+-----+------+-------------+
+
+    * FIFO: 
+    +------------------------+---------+---+----+------+-----+---------+
+    |          Name          | BRAM_18K| FF| LUT| Depth| Bits| Size:D*B|
+    +------------------------+---------+---+----+------+-----+---------+
+    |PAR_L_RINV_val_0_0_s_U  |        0|  5|  44|     3|   32|       96|
+    |PAR_L_RINV_val_0_1_s_U  |        0|  5|  44|     3|   32|       96|
+    |PAR_L_RINV_val_0_2_s_U  |        0|  5|  44|     3|   32|       96|
+    |PAR_L_RINV_val_1_0_s_U  |        0|  5|  44|     3|   32|       96|
+    |PAR_L_RINV_val_1_1_s_U  |        0|  5|  44|     3|   32|       96|
+    |PAR_L_RINV_val_1_2_s_U  |        0|  5|  44|     3|   32|       96|
+    |PAR_L_RINV_val_2_0_s_U  |        0|  5|  44|     3|   32|       96|
+    |PAR_L_RINV_val_2_1_s_U  |        0|  5|  44|     3|   32|       96|
+    |PAR_L_RINV_val_2_2_s_U  |        0|  5|  44|     3|   32|       96|
+    |PAR_R_RINV_val_0_0_s_U  |        0|  5|  44|     3|   32|       96|
+    |PAR_R_RINV_val_0_1_s_U  |        0|  5|  44|     3|   32|       96|
+    |PAR_R_RINV_val_0_2_s_U  |        0|  5|  44|     3|   32|       96|
+    |PAR_R_RINV_val_1_0_s_U  |        0|  5|  44|     3|   32|       96|
+    |PAR_R_RINV_val_1_1_s_U  |        0|  5|  44|     3|   32|       96|
+    |PAR_R_RINV_val_1_2_s_U  |        0|  5|  44|     3|   32|       96|
+    |PAR_R_RINV_val_2_0_s_U  |        0|  5|  44|     3|   32|       96|
+    |PAR_R_RINV_val_2_1_s_U  |        0|  5|  44|     3|   32|       96|
+    |PAR_R_RINV_val_2_2_s_U  |        0|  5|  44|     3|   32|       96|
+    |col_packets_loc_chan_U  |        0|  5|  44|     2|   32|       64|
+    |cx1_loc_c_U             |        0|  5|  44|     3|   32|       96|
+    |cx2_loc_c_U             |        0|  5|  44|     3|   32|       96|
+    |cy1_loc_c_U             |        0|  5|  44|     3|   32|       96|
+    |cy2_loc_c_U             |        0|  5|  44|     3|   32|       96|
+    |dMap_data_stream_0_s_U  |        0|  5|  20|     2|    8|       16|
+    |fx1_loc_c_U             |        0|  5|  44|     3|   32|       96|
+    |fx2_loc_c_U             |        0|  5|  44|     3|   32|       96|
+    |fy1_loc_c_U             |        0|  5|  44|     3|   32|       96|
+    |fy2_loc_c_U             |        0|  5|  44|     3|   32|       96|
+    |packets_loc_c_U         |        0|  5|  44|     4|   32|      128|
+    |tmp_cast_loc_channel_U  |        0|  5|  75|     2|   63|      126|
+    +------------------------+---------+---+----+------+-----+---------+
+    |Total                   |        0|150|1327|    88|  967|     2830|
+    +------------------------+---------+---+----+------+-----+---------+
+
+    * Expression: 
+    +--------------------------------------------+----------+-------+---+----+------------+------------+
+    |                Variable Name               | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------------------------------------+----------+-------+---+----+------------+------------+
+    |Block_arrayctor_loop_U0_ap_ready_count      |     +    |      0|  0|  10|           2|           1|
+    |Loop_2_proc_U0_ap_ready_count               |     +    |      0|  0|  10|           2|           1|
+    |Loop_disparityMap_la_U0_ap_ready_count      |     +    |      0|  0|  10|           2|           1|
+    |Block_arrayctor_loop_U0_ap_continue         |    and   |      0|  0|   2|           1|           1|
+    |Block_arrayctor_loop_U0_ap_start            |    and   |      0|  0|   2|           1|           1|
+    |Loop_2_proc_U0_ap_start                     |    and   |      0|  0|   2|           1|           1|
+    |Loop_Loop_Row_proc_U0_ap_start              |    and   |      0|  0|   2|           1|           1|
+    |Loop_disparityMap_la_U0_ap_continue         |    and   |      0|  0|   2|           1|           1|
+    |Loop_disparityMap_la_U0_ap_start            |    and   |      0|  0|   2|           1|           1|
+    |ap_channel_done_col_packets_loc_chan        |    and   |      0|  0|   2|           1|           1|
+    |ap_channel_done_leftImage_in_V              |    and   |      0|  0|   2|           1|           1|
+    |ap_channel_done_rightImage_in_V             |    and   |      0|  0|   2|           1|           1|
+    |ap_channel_done_tmp_cast_loc_channel        |    and   |      0|  0|   2|           1|           1|
+    |ap_idle                                     |    and   |      0|  0|   2|           1|           1|
+    |ap_sync_ready                               |    and   |      0|  0|   2|           1|           1|
+    |ap_sync_Block_arrayctor_loop_U0_ap_ready    |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_Loop_2_proc_U0_ap_ready             |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_Loop_disparityMap_la_U0_ap_ready    |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_channel_write_col_packets_loc_chan  |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_channel_write_leftImage_in_V        |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_channel_write_rightImage_in_V       |    or    |      0|  0|   2|           1|           1|
+    |ap_sync_channel_write_tmp_cast_loc_channel  |    or    |      0|  0|   2|           1|           1|
+    +--------------------------------------------+----------+-------+---+----+------------+------------+
+    |Total                                       |          |      0|  0|  68|          25|          22|
+    +--------------------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +------------------------------------------------+----+-----------+-----+-----------+
+    |                      Name                      | LUT| Input Size| Bits| Total Bits|
+    +------------------------------------------------+----+-----------+-----+-----------+
+    |Block_arrayctor_loop_U0_ap_ready_count          |   9|          2|    2|          4|
+    |Loop_2_proc_U0_ap_ready_count                   |   9|          2|    2|          4|
+    |Loop_disparityMap_la_U0_ap_ready_count          |   9|          2|    2|          4|
+    |ap_sync_reg_Block_arrayctor_loop_U0_ap_ready    |   9|          2|    1|          2|
+    |ap_sync_reg_Loop_2_proc_U0_ap_ready             |   9|          2|    1|          2|
+    |ap_sync_reg_Loop_disparityMap_la_U0_ap_ready    |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_col_packets_loc_chan  |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_leftImage_in_V        |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_rightImage_in_V       |   9|          2|    1|          2|
+    |ap_sync_reg_channel_write_tmp_cast_loc_channel  |   9|          2|    1|          2|
+    +------------------------------------------------+----+-----------+-----+-----------+
+    |Total                                           |  90|         20|   13|         26|
+    +------------------------------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------------------------------------+---+----+-----+-----------+
+    |                      Name                      | FF| LUT| Bits| Const Bits|
+    +------------------------------------------------+---+----+-----+-----------+
+    |Block_arrayctor_loop_U0_ap_ready_count          |  2|   0|    2|          0|
+    |Loop_2_proc_U0_ap_ready_count                   |  2|   0|    2|          0|
+    |Loop_disparityMap_la_U0_ap_ready_count          |  2|   0|    2|          0|
+    |ap_sync_reg_Block_arrayctor_loop_U0_ap_ready    |  1|   0|    1|          0|
+    |ap_sync_reg_Loop_2_proc_U0_ap_ready             |  1|   0|    1|          0|
+    |ap_sync_reg_Loop_disparityMap_la_U0_ap_ready    |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_col_packets_loc_chan  |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_leftImage_in_V        |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_rightImage_in_V       |  1|   0|    1|          0|
+    |ap_sync_reg_channel_write_tmp_cast_loc_channel  |  1|   0|    1|          0|
+    +------------------------------------------------+---+----+-----+-----------+
+    |Total                                           | 13|   0|   13|          0|
+    +------------------------------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------------+-----+-----+------------+---------------+--------------+
+|         RTL Ports         | Dir | Bits|  Protocol  | Source Object |    C Type    |
++---------------------------+-----+-----+------------+---------------+--------------+
+|s_axi_CONTROL_BUS_AWVALID  |  in |    1|    s_axi   |  CONTROL_BUS  |  return void |
+|s_axi_CONTROL_BUS_AWREADY  | out |    1|    s_axi   |  CONTROL_BUS  |  return void |
+|s_axi_CONTROL_BUS_AWADDR   |  in |    6|    s_axi   |  CONTROL_BUS  |  return void |
+|s_axi_CONTROL_BUS_WVALID   |  in |    1|    s_axi   |  CONTROL_BUS  |  return void |
+|s_axi_CONTROL_BUS_WREADY   | out |    1|    s_axi   |  CONTROL_BUS  |  return void |
+|s_axi_CONTROL_BUS_WDATA    |  in |   32|    s_axi   |  CONTROL_BUS  |  return void |
+|s_axi_CONTROL_BUS_WSTRB    |  in |    4|    s_axi   |  CONTROL_BUS  |  return void |
+|s_axi_CONTROL_BUS_ARVALID  |  in |    1|    s_axi   |  CONTROL_BUS  |  return void |
+|s_axi_CONTROL_BUS_ARREADY  | out |    1|    s_axi   |  CONTROL_BUS  |  return void |
+|s_axi_CONTROL_BUS_ARADDR   |  in |    6|    s_axi   |  CONTROL_BUS  |  return void |
+|s_axi_CONTROL_BUS_RVALID   | out |    1|    s_axi   |  CONTROL_BUS  |  return void |
+|s_axi_CONTROL_BUS_RREADY   |  in |    1|    s_axi   |  CONTROL_BUS  |  return void |
+|s_axi_CONTROL_BUS_RDATA    | out |   32|    s_axi   |  CONTROL_BUS  |  return void |
+|s_axi_CONTROL_BUS_RRESP    | out |    2|    s_axi   |  CONTROL_BUS  |  return void |
+|s_axi_CONTROL_BUS_BVALID   | out |    1|    s_axi   |  CONTROL_BUS  |  return void |
+|s_axi_CONTROL_BUS_BREADY   |  in |    1|    s_axi   |  CONTROL_BUS  |  return void |
+|s_axi_CONTROL_BUS_BRESP    | out |    2|    s_axi   |  CONTROL_BUS  |  return void |
+|ap_clk                     |  in |    1| ap_ctrl_hs |  disparityMap | return value |
+|ap_rst_n                   |  in |    1| ap_ctrl_hs |  disparityMap | return value |
+|interrupt                  | out |    1| ap_ctrl_hs |  disparityMap | return value |
+|AXI_LITE_clk               |  in |    1| ap_ctrl_hs |  disparityMap | return value |
+|ap_rst_n_AXI_LITE_clk      |  in |    1| ap_ctrl_hs |  disparityMap | return value |
+|in_stream_TDATA            |  in |   32|    axis    |  INPUT_data_V |    pointer   |
+|in_stream_TVALID           |  in |    1|    axis    |  INPUT_data_V |    pointer   |
+|in_stream_TREADY           | out |    1|    axis    |  INPUT_data_V |    pointer   |
+|in_stream_TUSER            |  in |    1|    axis    |  INPUT_user_V |    pointer   |
+|in_stream_TLAST            |  in |    1|    axis    |  INPUT_last_V |    pointer   |
+|dMapout_TDATA              | out |   32|    axis    | OUTPUT_data_V |    pointer   |
+|dMapout_TUSER              | out |    1|    axis    | OUTPUT_user_V |    pointer   |
+|dMapout_TLAST              | out |    1|    axis    | OUTPUT_last_V |    pointer   |
+|dMapout_TVALID             | out |    1|    axis    | OUTPUT_last_V |    pointer   |
+|dMapout_TREADY             |  in |    1|    axis    | OUTPUT_last_V |    pointer   |
++---------------------------+-----+-----+------------+---------------+--------------+
+
