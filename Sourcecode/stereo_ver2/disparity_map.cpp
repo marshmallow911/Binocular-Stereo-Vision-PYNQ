@@ -204,8 +204,7 @@ void disparityMap (wide_stream *in_stream,wide_stream *dMapout, ap_uint<32> rows
 				dMap<<OUT_PIXEL;
 		}
 	}
-    for(int r = 0; r < rows; r++){
-    	for(int c = 0;c<cols/4; c++)
+	for(int r = 0; r < packets/2; r++)
     	{
     #pragma HLS pipeline II=4
 			ap_uint<32> dat;
